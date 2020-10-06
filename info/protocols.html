@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OSI protocols</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			color:white;
+		}
+		body{
+			background: #000000d9;
+			font-size: 23px;
+		}
+		.container{
+			width:80vw;
+			position:relative;
+			top:40px;
+			margin:auto;
+		}	
+		p{
+			margin-bottom:20px;
+			font-size:1.8rem;
+		}
+		span{
+			color:orange;
+		}
+		h2>a{
+			text-transform:uppercase;
+		}
+		section{
+			margin-bottom:30px;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- .container>section.protocol*20>(p>a)+ul.vids>li*3>a -->
+	
+	
+
+	<div class="container">
+		<article>	
+			<a href="https://www.youtube.com/watch?v=LANW3m7UgWs"></a>
+		</article>
+
+		<article class="osi-layer application">
+			<section class="protocol https">
+				<h2><a href="">https</a></h2>
+				<p><a href="	">https</a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<section class="protocol ftp">
+				<h2><a href="ftp"></a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<section class="protocol dns">
+				<h2><a href="">dns</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			<h2><a href="">dhcp</a></h2>
+			<section class="protocol dhcp">
+
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<section class="protocol smtp">
+				<h2><a href="">smtp</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<section class="protocol pop3">
+				<h2><a href="">pop3</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+
+		</article>
+		
+		<article class="osi-layer presentation">
+			<section class="intro">
+
+				the presentation layer is responsible for translating data from one format into another e.g. bcpdi to ascii, and for converting the media i.e. text, html, jpg, mp4, mp3 into  binary so that it can be converted into electrical signals over the physical layer. informaiton here is converted to ascii which makes easier transmittion as hexadecimals
+			</section>
+			
+			<section class="protocol ascii">
+				<h2><a href="https://en.wikipedia.org/wiki/ASCII">ascii</a></h2>
+				<p>
+					ASCII sands for <span>American Standard Code for Information Interchange</span>. It uses 7 bits to represent a character incluing numbers, letters and symbols such as &?#..., and control characters such as return, tab, esc, etc. The first bit is a parity bit, used for error detection. With 7 bits there is a total of 2^7=128 distinct combinations of 1s and 0s to form a char
+				</p>
+				<p>
+					ASCII extended is the adition of an 8th bit which double the amount of possible combinations, which is 256. This allows the addition of extra characters such as "é". it is still limited, hence the introduction of UTF-8 
+				</p>
+
+<xmp>
+	0-9=65-75
+	A-Z=65-91
+	a-z=97-123
+</xmp>
+
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+
+			<section class="protocol utf-8">
+				<h2>
+					<a href="">utf-8</a>
+				</h2>
+			<p>
+
+					utf-8 extends ascii and allowes the use of non latin characters such as Chinese and Russian to be used. whereas ascii is just 7bits, utf-8 is can be up to 6bytes. the first few numbers denotes how many bytes the character consists of followd by a 0 which marks the end of the header. it is then followed by the code for the character, the second byte always begins with 10, followed by the rest of the charcode.
+			</p>
+			<p>
+				the first four nums in the first one indicate how many bytes are to follow
+				the first nums of each subsequent octet begins with 10=continuation byte
+				chinese uses 3Bytes utf-8 encoding 2Bytes in utf-16
+			</p>
+<xmp>
+	[128 64 32 16 8 4 2 1]
+	
+	//2 Byte encoding
+	[110xxxxxx][10xxxxxx]
+	// x=11 so num of possible chars=2^11=2048
+	
+	//3 Byte encoding
+	[1110xxxx][10xxxxxx][10xxxxxx]
+	//x=16 so num of possible chars=2^16=65536
+	
+	 0001|1111 1010|1100 1011|1101
+	    1F        AC         BD
+
+	//-four Byte encoding UTF-\\
+	[11110xxx][10xxxxxx][10xxxxxx][10xxxxxx]
+	x=21 so num of possible chars=2^21=2097152
+
+	1111|0111 1011|1010 1011|0010 1011|1101
+	    F7       BA        B2        BD
+	
+</xmp>
+	
+	
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+		</article>
+		
+		<article class="osi-layer session">
+			<section class="protocol tcp">
+				<h2><a href="">tcp</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<section class="protocol udp">
+				<h2><a href="">udp</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+
+		</article>
+		<!--  -->
+		<article class="osi-layer transport">
+			<section class="protocol ssl">
+				<h2><a href="">ssl</a></h2>
+				.key-words-container>.keyword
+				<p>
+					<a href=""></a>
+					SSL traditionally uses <span>X.509</span> certificates for announcing server and client public keys;  while there is no such thing in SSL, or, more accurately, when such things are used in SSL they are not considered to be part of SSL (for instance, when doing password-based HTTP authentication in a SSL tunnel, we say that it is part of "HTTPS", but it really works in a way similar to what happens with SSH).
+				</p>
+				<p>
+					Conceptually, you could take SSH and replace the tunnel part with the one from SSL. You could also take HTTPS and replace the SSL thing with SSH-with-data-transport and a hook to extract the server public key from its certificate. There is no scientific impossibility and, if done properly, security would remain the same. However, there is no widespread set of conventions or existing tools for that.
+				</p>
+				<p>
+					So we do not use SSL and SSH for the same things, but that's because of what tools historically came with the implementations of those protocols, not due to a security related difference. And whoever implements SSL or SSH would be well advised to look at what kind of attacks were tried on both protocols. 
+				</p>
+				<p>
+					This isn't a reasonable comparison to make. SSL is a general method for protecting data transported over a network, whereas SSH is a network application for logging in and sharing data with a remote computer.
+				</p>
+				<p>
+					The transport layer protection in SSH is similar in capability to SSL, so which is "more secure" depends on what your specific threat model calls for and whether the implementations of each address the issues you're trying to deal with.
+				</p>
+				<p>
+					SSH then has a user authentication layer which SSL lacks (because it doesn't need it - SSL just needs to authenticate the two connecting interfaces which SSH can also do). In UTF-8 art:
+				</p>
+
+				<p>
+					
+					SSL, TLS, ECC, SHA
+
+					what’s the difference between SSL  and TLS? 
+
+					A Brief History of SSL and TLS
+
+					SSL and TLS are both cryptographic protocols that provide <span>authentication</span> and data <span>encryption</span> between <span>servers</span>, <span>machines</span> and <span>applications</span> operating over a network (e.g. a client connecting to a web server). SSL is the predecessor to TLS. Over the years, new versions of the protocols have been released to address vulnerabilities and support<span> stronger, more secure</span> <span>cipher suites</span> and <span>algorithms</span>.
+
+					SSL was originally developed by <span>Netscape</span> and first came onto the scene way back in <span>1995</span> with SSL 2.0 (1.0 was never released to the public). <span>Version 2.0</span> was quickly replaced by <span>SSL 3.0 in 1996</span> after a number of <span>vulnerabilities</span> were found. Note: Versions 2.0 and 3.0 are sometimes written as SSLv2 and SSLv3.
+
+					<span>TLS</span> was introduced in <span>1999</span> as a new version of SSL and was <span>based on SSL 3.0</span>:
+
+					    The differences between this protocol and SSL 3.0 are not dramatic, but they are significant enough that TLS 1.0 and SSL 3.0 do not interoperate.”
+
+					    (source)
+
+					<span>TLS is currently at v. 1.2</span>, with TLS v. 1.3 currently in draft.
+					Should You Be Using SSL or TLS?
+
+					Both SSL 2.0 and 3.0 have been <span>deprecated by the IETF</span> (in <span>2011 and 2015</span>, respectively). Over the years vulnerabilities have been and continue to be discovered in the deprecated SSL protocols (e.g. <span>POODLE, DROWN</span>). Most modern browsers will show a degraded user experience (e.g. <span>line through the padlock</span> or https in the URL bar, security warnings) when they encounter a web server using the old protocols. For these reasons, you should <span>disable SSL 2.0 and 3.0 in your server configuration</span>, <span>leaving only TLS protocols enabled</span>.
+
+					Certificates are not the same as protocols
+
+					Before anyone starts worrying that they need to replace their existing SSL Certificates with TLS Certificates, it’s important to note that certificates are not dependent on protocols. That is, <span>you don’t need to use a TLS Certificate vs. an SSL Certificate</span>. While many vendors tend to use the phrase “SSL/TLS Certificate”, it may be more accurate to call them “Certificates for use with SSL and TLS", since the protocols are determined by your server configuration, not the certificates themselves.
+
+					It’s likely you will <span>continue to see certificates referred to as SSL Certificates</span> because at this point that’s the term more people are familiar with, but we’re beginning to see increased usage of the term TLS across the industry. SSL/TLS is a common compromise until more people become familiar with TLS.
+					
+					Are SSL and TLS Any Different Cryptographically?
+					Transport Layer Security (TLS) was just a new name for SSL v4 - essentially, we are talking about the same protocol.
+
+					Each newly released version of the protocol came and will come with its own improvements and/or new/deprecated features.
+
+					It’s worth noting here that SSL and TLS simply refer to the handshake that takes place between a client and a server. The handshake doesn’t actually do any encryption itself, it just agrees on a shared secret and type of encryption that is going to be used.
+				</p>
+	<xmp>
+		SSL              SSH
+		+-------------+ +-----------------+
+		| Nothing     | | RFC4254         | Connection multiplexing
+		+-------------+ +-----------------+
+		| Nothing     | | RFC4252         | User authentication
+		+-------------+ +-----------------+
+		| RFC5246     | | RFC4253         | Encrypted data transport
+		+-------------+ +-----------------+
+
+	</xmp>
+			<p>
+					The problem is two-fold, it's not just the strength and weakness of the encryption. But it's the ease and convenience of the delivery. So from business perspective SSL/TLS is is more convenient and easier because it just requires a browser and either a public or private Cert.
+			</p>
+			<p>
+					And SSH requires either the application or thin client installed to use it. That is more of a problem from a user Internet client perspective and support. 
+			</p>
+			<p>
+					I think there is one aspect of this comparison that was overlooked. user185 came close but didn't quite get there. I agree that these are apples and oranges and feel a better apples to apples comparison to be HTTPS and SSH. HTTPS and SSH utilize different layers of the OSI model and therefore encrypt the data at different times in the transmission. Then the real questions one should be asking would be along the lines of when is this data encrypted and unencrypted during the transmission. This will reveal your potential attack surfaces. With HTTPS, once the packet is received by a device in the destination network (Web Server, Border Router, load balancer, etc...)it is un-encrypted and spends the rest of its journey in plain text. Many would argue that this is not a big deal since the traffic is internal at this time, but if the payload contains sensitive data, it is being stored un-encrypted in the log files of every network device it passes through until it gets to its final destination. With SSH, typically, the destination device is specified and the transmission is encrypted until it reaches this device. There are ways of re-encrypting the HTTPS data but these are extra steps that most forget to take when implementing an HTTPS solution in their environment.
+				</p>
+				<p>
+					Difference between tls ssl and ssh
+					Technically, TLS consists of two parts:
+
+					The TLS handshake layer manages which cipher (the type of encryption algorithm) will be used, the authentication (using a certificate specific to your domain name and organization), and the key exchange (based on the public-private key pair from the certificate). The handshake process is performed only once to establish a secure network connection for both parties.
+					The TLS record layer gets data from the user applications, encrypts it, fragments it to an appropriate size (as determined by the cipher), and sends it to the network transport layer.
+					TLS establishes an encrypted, bidirectional network tunnel for arbitrary data to travel between two hosts. TLS is most often used in conjunction with other Internet protocols such as HTTPS, SSH, FTPS, and secure email.		
+				</p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+
+
+		</article>
+		
+		<article class="osi-layer network">
+			section.protocol>(p>a)+ul>li*3>a
+			
+			<section class="protocol icmp">
+				<h2><a href="">icmp</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<section class="protocol igmp">
+				<h2><a href="">igmp</a></h2>
+				<p><a href=""></a></p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+		</article>
+		
+		<article class="osi-layer data-link">
+			
+			<section class="intro">	
+				<p>	
+					Physical addressing for network connections exists at the data link layer. The data link layer combines data bits into entities called frames. Network topologies like Ethernet exist at the data link layer. Network switches are the most common network devices that exist at the data link layer.
+				</p>
+				<p>	
+					The data link layer combines data bits into entities called frames. Network topologies like Ethernet exist at the data link layer. Network switches are the most common network devices that exist at the data link layer.
+				</p>
+				<p>	
+					in summary, This layer defines the framing, addressing, and check-summing of Ethernet packets.
+				</p>
+			</section>
+			
+			<section class="protocol mac">
+				<h2><a href="">mac</a></h2>
+				<p>
+					It has four functions. First, all information is translated from hexadecimal to binary or binary to hexadecimal. Next, a bit of error control and correction occurs here. third information is packaged, so the next layer, up or down, can understand it in a standard format. Finally, information regarding a data link address, commonly referred to a MAC address is added to information here.
+				</p>
+				<p>
+					The MAC sublayer controls device interaction.  
+				</p>
+				<ul class="vids">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+
+			<section class="protocol llc">
+				<h2><a href="">llc(802.2)</a></h2>
+				
+				<p>
+					The LLC sublayer deals with addressing and multiplexing.
+					(LLC) provides conventional data link protocol functions, such as error control and flow control. LLC is very similar to several famous data link protocols, like Synchronous Data Link Control (SDLC) or High Level Data Link Control (HDLC) protocols. The only difference is that LCC includes the service access points (SAP) information in the frame to allow for multiple applications (programs) on one station to communicate simultaneously with other applications on other stations in the network.
+				</p>
+								<!-- dl>(td+td)*3 -->
+				<p>
+					LLC provides the following three services for a local network application:
+				</p>
+				<!-- table>(thead>tr>th*2)+(tbody>tr*3>td*2) -->
+				<table>
+					<thead>
+						<tr>
+							<th>Service</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Unacknowledged connectionless service</td>
+							<td>
+							This is a data gram-type of service, so there is no overhead to establish a connection. It provides no acknowledgment to ensure the delivery of a frame.</td>
+						</tr>
+						<tr>
+							<td>Acknowledged connectionless service:</td> 
+							<td>This service provides acknowledgment to a frame received to relieve the burden in the higher layer.</td>
+						</tr>
+						<tr>
+							<td>Connection-oriented service:</td> 
+							<td>This service provides flow control, sequencing, and error recovery between SAPs. It also allows for multiplexing logical endpoints over a single physical link.</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p>	
+					When it provides a <span>connection-oriented</span> or an <span>acknowledged connectionless</span> service, the LLC uses the <span>CRC</span> field to <span>detect errors</span>. To implement a connection-oriented service, the LLC uses the <span>Go Back N protocol</span> (see section 2.6.3) to <span>arrange for the transmitter to retransmit packets</span> that do not arrive error free.
+				</p>
+				<p>	
+
+					header
+					startFrame=8ytes(signals the reciever that data is on its way), Address=12bytes(source and destionation of file), 
+					type=2bytes(type of data)
+
+					trailer
+					FCS=4bytes(frame check sequence)
+					stop frame=optional
+					
+					LLC:
+						prepares data for transmission
+						frames the network layer packet
+						identifies network layer protocols
+					MAC:
+						addresses the frame
+						marks the beginning and end of a frame
+				</p>
+
+
+				<ul>
+					<li><a href="https://www.sciencedirect.com/topics/computer-science/logical-link-control">nice article</a></li>
+					<li><a href="https://www.youtube.com/watch?v=pi7mMjiixiY">MAC layer</a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			
+			<!--  -->
+				Kingston ValueRAM 1GB 184-Pin DDR SDRAM DDR 400 (PC 3200) Desktop Memory Model KVR400/1GR 
+				    DDR 400 (PC 3200)
+				    CAS Latency 3
+				    Voltage 2.6V
+
+				ADATA 1GB PC3200 400MHz 184-Pin DDR Desktop RAM AD1400001GMU
+				ADATA 1GB DDR1 SDRAM Computer Memory (RAM)
+
+
+			<!--  -->
+
+
+		</article>
+
+		<article>
+			<section class="commands">	
+				<h2>Videos</h2>
+				<table>	
+					<tr><td>ipconfig /all /displaydns /flushdns /registerdns</td><td>icmp application</td></tr>
+					<tr><td>ftp [get dir]</td><td>icmp application</td></tr>
+					<tr><td>netstat -anores</td><td>application</td></tr>
+					<tr><td>netsh</td><td>application</td></tr>
+					<tr><td>nbtstat -a laptop-author</td><td>for both local and remote networks</td></tr>
+					<tr><td>nslookup</td><td>dns application</td></tr>
+					<tr><td>tracert</td><td>icmp application</td></tr>
+
+					<tr><td>ping localhost 127.0.0.1</td><td>icmp application</td></tr>
+					<tr><td>route</td><td>network</td></tr>
+					<tr><td>ipconfig</td><td>network</td></tr>
+					<tr><td>arp</td><td>data link</td></tr>
+					<tr><td>getmac</td> <td>data link</td></tr>
+					<tr><td>FOR /L %i IN (1,1,254) DO ping -n 1 192.168.10.%i | FIND /i "Reply">>c:\ipaddresses.txt</td> <td></td></tr>
+				</table>
+				<ul>
+					<li><a href="https://www.youtube.com/watch?v=EC6teF7Aafc">Network	 commands</a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+		</article>
+	</div>
+
+
+
+
+</body>
+</html>
+
