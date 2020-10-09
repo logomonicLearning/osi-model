@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2020 by anonymous (http://jsbin.com/xigozetane/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.grid{
+  display:grid;
+  
+}
+.osi{
+  grid-template-rows:repeat(7,50px);
+  
+}
+
+.layer{
+  grid-template-columns:100px 100px auto;
+  border:1px dashed blue;
+  
+}
+
+/* .layer__name:hover{
+  cursor:pointer;
+  color:green;
+} */
+.flex{
+  display:flex;
+}
+
+.flex--center{
+  align-items:center;
+  /* align-content:center; */
+  justify-content:center;
+}
+
+.layer__description{
+  /* display:none; */
+  width:0;
+  overflow:hidden;
+  transition:width 0.5s ease;
+}
+
+.stretch{
+  width:100%;
+}
+
+
+
+</style>
+</head>
+<body>
+  
+  
+  <span style="display:none">
+    .container.grid>.groups+(.layer*7>.layer__number.flex.flex--center+.layer__name.flex.flex--center+.layer__description.flex.flex--center)
+  </span>
+  
+  <div id="root">
+    
+  </div>
+  
+<script id="jsbin-javascript">
+// data
+
+const layers=[
+  {
+    name:"Application",
+    description:"Applications live on this layer",
+    layerNum:7
+  },
+  {
+    name:"Presentation",
+    description:"",
+    layerNum:6
+  },
+  {
+    name:"Session",
+    description:"",
+    layerNum:5
+  },
+  {
+    name:"Transport",
+    description:"",
+    layerNum:4
+  },
+  {
+    name:"Network",
+    description:"",
+    layerNum:3
+  },
+  {
+    name:"Data link",
+    description:"",
+    layerNum:2
+  },
+  {
+    name:"Physical",
+    description:"",
+    layerNum:1
+  } 
+];
+
+// functions
+const mkeEl=(el)=>document.createElement(el)
+
+const center=(items)=>items.forEach(el=>el.classList.add("flex","flex--center"))
+
+
+// elements
+
+const groups=mkeEl('div')
+const osi=mkeEl('div');
+osi.classList.add('osi','grid')
+
+
+layers.forEach(el=>{
+  let layer=mkeEl('div')
+  layer.classList.add('layer','grid')
+//   layers
+  let name=mkeEl('div')
+  name.classList.add('layer__name')
+  let description=mkeEl('div')
+  description.classList.add('layer__description')
+  let layerNum=mkeEl('div')
+  layerNum.classList.add('layer__number')
+  center([name,description,layerNum])
+  
+//   adding the content to element
+  name.textContent=el.name
+  description.textContent=el.description
+  layerNum.textContent=el.layerNum
+    
+  layer.appendChild(layerNum)
+  layer.appendChild(name)
+  layer.appendChild(description)
+  osi.appendChild(layer)
+})
+
+document.getElementById('root').appendChild(osi)
+
+
+// there was a bit of conflict between the data and the dom elements so remembered to use the $ to denote something in the dom. this is a really important concept to get accross to noobs.
+// description transition and interactivity
+const $layers=[...document.querySelectorAll('.layer')];
+// $layers.forEach(el=>console.log(el.children[2]))
+
+$layers.forEach(el=>{
+  el.onclick=()=>{
+    el.children[2].classList.add('stretch');
+  }
+})
+
+$layers.forEach(el=>{
+  el.onmouseleave=()=>{
+    el.children[2].classList.remove('stretch');
+  }
+});
+
+
+// archive
+
+// $(document,'.layer').on("click",function(){
+//   $(this).next($('.layer__description').css({width:"200px"}));
+// })
+
+// $(document,'.layer__name').on("mouseleave",function(){
+//   $(this).next($('.layer__description').css({width:"0"}))
+// })
+
+
+
+
+
+</script>
+</body>
+</html>

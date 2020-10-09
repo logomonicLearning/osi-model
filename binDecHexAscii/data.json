@@ -1,0 +1,31 @@
+terms=[
+{
+"Type":"Binary",
+"base":"base 2	",
+"description":"Binary is a base 2 number system made up of 0s and 1s. It is the native language of the computer and is used to represent things such as the instructions for the processor, text characters known as ASCII, and IP addresses."
+},
+{
+"Type":"Byte\/Octet",
+"base":"8 bits	",
+"description":"A byte is a unit of data that is eight binary digits long"
+},
+{
+"Type":"Nibble",
+"base":"4 bits	",
+"description":"4-bit integers, memory addresses, or other data units are those that are 4 bits wide. ... A group of four bits is also called a nibble and has 24 = 16 possible values making them ideal to represent hex numbers."
+},
+{
+"Type":"Bit",
+"base":"True\/False",
+"description":"short for \"binary digit\"is the smallest unit of measurement used to quantify computer data. It contains a single binary value of 0 or 1. ... Since a byte contains eight bits that each have two possible values, a single byte may have 28 or 256 different values."
+},
+{
+"Type":"Decimal",
+"base":"base 10	",
+"description":"A decimal is a number expressed in the scale of tens. It is the most familiar number system often used in finance and everyday mathematics"
+},
+{
+"Type":"Hexadecimal",
+"base":"base 16	",
+"description":"The hexadecimal hex is a number system made up of 16 symbols. It uses the decimal numbers 0-9 and six extra symbols A-F to represent 10-15. Each hex character can be represented by 4 bits nibble and so hex is preferred over decimal for representing binary. The MAC address of a computer NIC and IPv6 use Hex."
+}]

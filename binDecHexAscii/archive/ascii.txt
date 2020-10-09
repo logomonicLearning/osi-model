@@ -1,0 +1,54 @@
+//-----ASCII--------\\
+[ascii](https://en.wikipedia.org/wiki/ASCII)
+
+ASCII uses 7 bits to represent a character incluing numbers, letters and symbols such as &?; an control characters such as return, tab, etc. By using 7 bits, we can have a total of 2^7=128 distinct combinations*  so there is a maximum of 128 possible characters.
+
+It uses 7 bits rather than 8 as the last bit is used for avoiding errors as parity bit. This was relevant years ago.
+
+ASCII extended is the adition of an 8th bit which double the amount of possible combinations, that is Math.pow(2,8)== 256. This allowe the addition of extra characters such as "é". it is still limited, hence the introduction of UTF-8 
+
+A=65
+a=97
+
+
+
+
+//---UTF-8---\\
+
+Unicode allowed non latin characters such as Chinese to be used.
+utf-8 extends ascii 
+
+[128 64 32 16 8 4 2 1]
+
+A=65=1000001
+
+//--2 Byte encoding--\\
+[110xxxxxx][10xxxxxx]
+
+x=5+6=11
+that is Math.pow(2,11)=2048 possible combinations
+
+//-3 Byte encoding-\\
+[1110xxxx][10xxxxxx][10xxxxxx]
+x=16
+=Math.pow(2,16)
+
+subaka
+wabaki
+
+
+0000|0000 0001|1111 1010|1100 1011|1101
+	00		  1F 	    AC 		  BD
+
+//-four Byte encoding UTF-\\
+1111|0111 1011|1010 1011|0010 1011|1101
+	F7		  BA 		B2		  BD
+......	  ..   		..		  ..
+
+
+the first four nums in the first one indicate how many bytes are to follow
+the first nums of each subsequent octet begins with 10=continuation byte
+chinese uses 3Bytes utf-8 encoding 2Bytes in utf-16
+	
+//------HEXADECIMAL-------\\
+

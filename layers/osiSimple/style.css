@@ -1,0 +1,44 @@
+
+.grid{
+  display:grid;
+  
+}
+.osi{
+  grid-template-rows: repeat(7,100px);
+  grid-column-gap: 5px;
+}
+
+.layer{
+  grid-template-columns: 60px 100px auto;
+    border: 1px dashed #00f;
+    grid-column-gap: 30px;  
+}
+
+/* .layer__name:hover{
+  cursor:pointer;
+  color:green;
+} */
+.flex{
+  display:flex;
+}
+
+.flex--center{
+  align-items:center;
+  /* align-content:center; */
+  justify-content:center;
+}
+
+
+.layer__description{
+  /* display:none; */
+  width:0;
+  overflow:hidden;
+  transition:width 0.5s ease;
+  position: ;
+}
+
+.stretch{
+  width:100%;
+}
+
+
