@@ -1,32 +1,78 @@
 
 ## 5 Session
 
-Session layer is important for connecting processeses running on diffrent stations over a network. It is  Involved in:
+## TERMS
 
-the presentation layer is responsible for translating data from one format into another e.g. bcpdi to ascii, and for converting the media i.e. text, html, jpg, mp4, mp3 into binary so that it can be converted into electrical signals over the physical layer.
-Establishing, maintaining and terminating connections between two hosts.
+- Session
+- Authentication
+- Authorisation
 
-supports multiple types of connections and authentication. and reconnection if an error should occure.
+<span style="display:none">
+This is the layer responsible for opening and closing communication between the two devices. The time between when the communication is opened and closed is known as the session. The session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources.
+The session layer also synchronizes data transfer with checkpoints. For example, if a 100 megabyte file is being transferred, the session layer could set a checkpoint every 5 megabytes. In the case of a disconnect or a crash after 52 megabytes have been transferred, the session could be resumed from the last checkpoint, meaning only 50 more megabytes of data need to be transferred. Without the checkpoints, the entire transfer would have to begin again from scratch. 
+Usually, the main tasks of L5 is authentication and authorisation, downloads files as data packets, session management.
+</span>
+---
 
-Session-layer services are commonly used in application environments that make use of remote procedure calls (<a href="">RPCs</a>) which is when a computer program causes a procedure (subroutine) to execute in a different address space (commonly on another computer on a shared network), which is coded as if it were a normal (local) procedure call, without the programmer explicitly coding the details for the remote interaction. That is, the programmer writes essentially the same code whether the subroutine is local to the executing program, or remote. This is a form of client–server interaction (caller is client, executor is server),
+Session layer is important for connecting processeses running on diffrent stations over a network. It supports multiple types of connections and authentication. and reconnection if an error should occure.
+See the table below for a list of its main functions:
 
-it checks user credentials e.g. username and password, assign numbers to session to identify them
+<table>
+<thead>
+    <tr>
+        <th>Purpose</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>    
+<tr>
+    <td>Establishing, maintaining and terminating connections between two hosts.</td>
+    <td>The time between when the communication is opened and closed is known as the session. The session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources.</td></tr>
+<tr>
+    <td>Synchronises data transfer</td><td>it does this by creating checkpoints so that data transfer can resume in case the connection is terminated unexpectedly. without the checkpoints the whole process must start again.</td>
+</tr>
+<tr><td>Authenticaction and authorisation</td><td>it checks user credentials such as username and password</td></tr></tbody>
+</table>
 
-Session support
-Security
-Logging onto a remote machine
-e.g.
-H.323 for VOIP (skype)
-netbios to share files and printers over a network.
-SSH. NFS
-RPC
 
-SSH, or Secure Shell, is a remote administration protocol that allows users to control and modify remote servers over the Internet. You might use it to connect with Github, or a remote web server. If this doesn’t sound familiar, you’ve probably not used it. Using Git as a version control system
+## SESSION LAYER PROTOCOLS
 
 
-Manages session and synchronizes data flow.
-so that you can create a flow of communication back and forth
+<table>
+    <thead><tr>
+        <th>Protocol</th>
+        <th>Description</th>
+    </tr></thead>
+    <tbody>
+        <tr>
+            <td> H.323 for VOIP </td>
+            <td>
+                H.323 is an ITU Telecommunication Standardization Sector (ITU-T) recommendation that describes protocols for the provision of audio-visual (A/V) communication sessions on all packet networks. H.323 provides standards for equipment, computers and services for multimedia communication across packet based networks and specifies transmission protocols for real-time video, audio and data details. used by applications such as skype.
+            </td>
+        </tr>
+        <tr>
+            <td> netbios </td>
+            <td>to share files and printers over a network.</td>
+        </tr>
+        <tr>
+            <td> NFS </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td> RPC </td>
+            <td>Session-layer services are commonly used in application environments that make use of remote procedure calls (<a href="">RPCs</a>) which is when a computer program causes a procedure (subroutine) to execute in a different address space (commonly on another computer on a shared network), which is coded as if it were a normal (local) procedure call<span style="display:none">, without the programmer explicitly coding the details for the remote interaction. That is, the programmer writes essentially the same code whether the subroutine is local to the executing program, or remote. </span> Each message is addressed to an RPC daemon listening to a port  on the remote system and each contains an identifier of the function to execute and the parameters to pass to the function. This is a form of client–server interaction (caller is client, executor is server),</td>
+        </tr>
+        <tr>
+            <td>SSH</td>
+            <td>
+            Secure Shell, is a remote administration protocol that allows users to control and modify remote servers over the Internet. It is usually accessed from the command line and requires authentication (username and password) You might use it to connect with Github.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="">Prev</a>
+<a href="">Next</a>
 
 it is very similar to IPC, however it is more well structured, and doesnt just send packets. 
 
-Each message is addressed to an RPC daemon listening to a port  on the remote system and each contains an identifier of the function to execute and the parameters to pass to the function.
