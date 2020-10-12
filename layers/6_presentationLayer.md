@@ -1,8 +1,5 @@
 ## 6 Presentation
-The presentation layer is responsible for formatting and delivering data to the application layer for further processing or display. It relieves the application layer of concern regarding syntactical differences in data representation within the end-user systems. 
-
-<span style="display:none">The presentation Layer recieves data from session layer and converts bits into human readable format known as <a href="">ASCII</a>. It is also involved in <a href="" >encrypting</a> data to be sent to the presentation layer and decrypting data from the presentation layer to be passed to the Application layer for security of messages. , 
-also involved in compression of data.</span>
+The presentation layer is responsible for formatting and delivering data to the application layer for further processing or display. in other words, layer 6 makes the data presentable for applications to consume. 
 
 The table below summarises the purpose of this layer
 
@@ -12,22 +9,46 @@ The table below summarises the purpose of this layer
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td>Convertion</td>
-		<td>It converts data it recieves as bits from the lower layers and converts it into the associated format. for example, text files will be converted to ASCII while images may be converted into colors such as PNG or JPEG and passes this on to the Application layer to be further processed.  It also converting media i.e. text, html, jpg, mp4, mp3 into binary so that it can be converted into electrical signals over the physical layer (Layer 1).</td>
+		<td>Convert</td>
+		<td>It converts data recieved as bits (0s and 1s)  from the lower layers and converts it into its associated file format. For example, textual data may be converted to ASCII, images to png and audio to mp3.  It also converting media into binary so that it can be converted into electrical signals over the physical layer (Layer 1).
+		</td>
 	</tr>
 	<tr>
-		<td>Translation</td>
-		<td>An example of a presentation service would be the conversion of an EBCDIC-coded text computer file to an ASCII-coded file.</td>
+		<td>Translate</td>
+		<td>Different machines may use different encoding schemes, so the applicaiton layer may need to translate data into a format that the Application Layer can consume. 
+		</td>
+<ul>
+	<li>UTF8 -> ASCII </li>
+	<li>ASCII -> EBCDIC).</li>
+</ul>	
+</td>
 	</tr>
 	<tr>
 		<td>Encryption/Decrypt</td>
-		<td>It encrypts data to be passed onto the presentation layer below and decrypts data from the presentation layer to be passed to the Application. encryption ensures that messages remain private and are not easedropped when sent over a network</td>
+		<td>
+		Layer 6 is able to encrypt messages to be sent, and decode encrypted messages it recieves for data privacy.This is usually through L4 Transport (SSL/TLS protocol)
+		</td>
 	</tr>
 	<tr>
 		<td>Compression/Decompression</td>
-		<td>This layer is involved in  Compression &amp; of large files it recieves from the application layer such as images and videos to reduce the overheads needed to send data over a network. it also decompresses  files it recieves from  the layer below</td>
+		<td>This layer uses <a hre="">compression algorithms</a> to reduce the size of data recieved from L7 Application Layer to be sent over the network. This is especially important when sending large files such as video and large applications as it reduces the overheads needed to transfer data. It also decompresses data recieved from the sender. 
+
+		compression may be further subdivided as:
+
+<ul>
+	<li>
+		<a href="">lossy (data integrity isn't guaranteed)</a>
+	</li>
+	<li>
+		<a href="">lossless lossless (data integrity is guaranteed).</a>
+	</li>
+</ul>		
+
+</td>
 	</tr>
 </table>
+
+
 
 <table>
 	<thead>
@@ -71,8 +92,8 @@ XML
 Objects
 
 ASCII 
-<td>0-9</td><td> 48-57 </td>
-<td>A-7</td><td> 65 </td>
+<td>0-9</td><td>48-57</td>
+<td>A-7</td><td>65</td>
 <td></td><td>97</td>
 
 

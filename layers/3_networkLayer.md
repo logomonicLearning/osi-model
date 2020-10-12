@@ -12,7 +12,8 @@
 
 
 
-The network layer is responsible for facilitating data transfer between two different networks throught a router. This layer is not needed however if the target machine is on the same local area network. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender’s device, and reassembling these packets on the receiving device. the network layer is point-to-point in contrast to the Transport layer which is an end-to-end. this basically means???
+The network layer is responsible for facilitating data transfer between two different networks throught a router. This layer is not needed however if the target machine is on the same local area network. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender’s device, and reassembling these packets on the receiving device. the network layer is point-to-point in contrast to the Transport layer which is an end-to-end. this basically means??? data is encapsulated with the sender and recievers ip addressed to be sent over WAN and decapsulated them to be sent to upper layers.
+
 
 <span style="display:none">handles Routing of data. after data has arrived, each frame is examined to see if the data has reached its ultimate target. it recieves outgoing and incomming transmissions and ensures that it reaches the right target. for IP addressses this is achieved through ARP. Internet Protocol (IP) address is the adddress of your computer over a network. 
 </span>
@@ -83,17 +84,29 @@ see the table below for a list of some network layer protocols.
 </table>
 
 
+---
 
-data is sent to the lower layer as packets.
+
+
+## IP Addresses
+
+In this tutorial for beginners I discuss the structure of the IPv6 address, the network portion, the interface ID, and the network prefix. The function of the different types of IPv6 addresses: global unicast, link-local, unique local, and anycast. How SLAAC works in IPv6 address auto-configuration along with EUI-64 to auto-configure the interface-id. The role of ICMPv6 in router and neighbor solicitation and advertisement (RS, RA, NS, NA). I also go over IPv6 addresses that are important to know like IPv6 all routes default gateway, loopback, and multicast addresses like the all solicited nodes multicast address
 
 e.g. 192.168.1.9
 
 127.0.0.1 is known as a loopback address.
 
+![ipv6 parts](..\images\partsOfipv6.png)
+
+---
 
 
 
-Quick excercise:
+
+---
+
+
+### Quick excercise:
 do the following to see all the current computers on your Local Area Network (LAN):
 
 
@@ -116,3 +129,7 @@ type ping  nameofwebsite.com
 
 further reading: 
 delivery schemes
+
+---
+
+[ip video](https://www.youtube.com/watch?v=z7Al3P8ShM8)
