@@ -2,22 +2,38 @@
 
 ### Key Terms
 
-- Mac Address: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. The first 3bytes identify the manufacturer of the device, and the last 3 bytes identify are unique to every device.<br/><br/>
-<span title="Manufacturer" style="color:blue">00-1A-7D</span>-<span title="unique to every device" style="color:red">DF-61-8B</span>
-<br><br>
-a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address. it can be separated either by a hyphen (-), colon (:) or dot (.)
-- header information: FCS : Frame Check Sequence Stop frame : (Optional) when field length is not used - NIC: network interface card.
+- Mac Address: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is either separated by a hyphen (-), colon (:) or dot (.). The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
+<table style="text-align:center">
+<thead>
+       <tr ><th colspan="2">MAC Address</th>
+    </tr>
+</thead>
+<tbody>
+ <tr >
+  <td colspan="2"><span style="background:orange; color:white;">00-1A-7D</span>-<span style="background:green; color:white">DF-61-8B</span></td>
+ </tr>
+ <tr >
+  <td >Manufacturer
+  </td>
+  <td>Unique Identifyer
+  </td>
+ </tr>
+</tbody>
+</table>
+
+- header information: FCS : Frame Check Sequence Stop frame : (Optional) when field length is not used 
+- NIC: network interface card.
 
 
 L2 Data Link Layer(DLL): It is considered to be the most complex layer in the OSI model. It consists of 2 sublayers which will be discussed separately in this article:
 
 - Logic Link Controller(LLC) connects to the network layer above. 
-- Media Access Controller( MAC) communicates with the physical layer below; and  
+- Media Access Controller( MAC) communicates with the physical layer below;  
 
 
 <span style="display:none">
 The data link layer is very similar to the network layer, except the data link layer facilitates data transfer between two devices on the SAME network. The data link layer takes packets from the network layer and breaks them into smaller pieces called frames. Like the network layer, the data link layer is also responsible for flow control and error control in intra-network communication (The transport layer only does flow control and error control for inter-network communications).<br/><br/>
-Duties usually are logical addressing (network layer), physical addressing (data link layer via MAC addresses of Network Interface Card, Switches), access media, controls how data is placed and received from the media (media access control, error detection).
+Duties usually are logical addressing (network layer), physical addressing (data link layer via MAC addresses of Network Interface Card, Switches), access media, controls how data is placed and received from the media (media access control, error detection). there are 2 types of protocols. Noiseless channels and noisy channel which is what stop and wait ARC and go-back-n ARQ.
 </span>
 
 <!-- no need for this table as each sublayer will be addressed accordingly.!!! -->
@@ -71,15 +87,13 @@ It provides the following services:
     <th>Description</th>
 </tr>
 <tr>
-    <td>ARQ (automatic repeat request): </td><td></td>
-</tr>
-<tr>
-    <td>Frame flow control: </td><td></td>
+    <td>Frame flow control: </td>
+    <td>Speed matching mechanism where the reciever informs the sender the speed at which it can handle frames. it coordinates the amount of data that can be sent before receiving an acknowledgment. flow control is a set of procedures that tells the sender how much data it can transmit before it must wait for an acknowledgement from the receiver. receiver has a limited speed at which it can process incoming data and limited amount of memory. receiver must inform the sender before the limits are reached and request that the transmitter send fewer frames or stop temporarily.</td>
 </tr>
 <tr>
     <td>error detection: </td>
     <td>
-        LLC uses the CRC field to detect errors When it provides a connection-oriented or an acknowledged connectionless service using the the Go Back N protocol to arrange for the transmitter to retransmit packets that do not arrive error free.
+        LLC uses the CRC field to detect errors When it provides a connection-oriented or an acknowledged connectionless service using the <a href="https://www.youtube.com/watch?v=LnbvhoxHn8M">Sliding window Automatic Repeat Request (ARQ)</a> Go Back N protocol to arrange for the transmitter to retransmit packets that do not arrive error free. >Automatic Repeat ReQuest (ARQ) is a group of error – control protocols for transmission of data over noisy or unreliable communication network. These protocols reside in the Data Link Layer and in the Transport Layer of the OSI (Open Systems Interconnection) reference model. They are named so because they provide for automatic retransmission of frames that are corrupted or lost during transmission. ARQ is also called Positive Acknowledgement with Retransmission (PAR).
     </td>
 </tr>
 <tr>
@@ -87,6 +101,7 @@ It provides the following services:
     <td> makes it possible for several network protocols (e.g. IP, IPX, Decnet, . EtherType, 802.1Q VLAN and Appletalk) to coexist within a multipoint network and to be transported over the same network medium.</td>
 </tr>
 </table>
+
 [:new](https://www.youtube.com/watch?v=_b4dXKB8Pt8)
 
 provides services to the upper layers
@@ -158,8 +173,8 @@ When receiving data from the physical layer, the MAC block ensures data integrit
 parts:
 
 <table>
-<tr><td>Preamble</td><td>: 7 bytes 101010</td>
-</tr><tr><td>SFD 1 byte</td><td>: 101011</td>
+<tr><td>Preamble</td><td>: 7 bytes 101010 of an Ethernet frame consists of a 56-bit (7-byte) pattern of alternating 1 and 0 bits, which allows devices on the network to easily detect a new incoming frame. The SFD is designed to break this pattern, and signal the start of the actual frame.</td>
+</tr><tr><td>SFD 1 byte</td><td>: 101011 is the 8-bit (1-byte) value marking the end of the preamble of an Ethernet frame. The SFD is immediately followed by the destination MAC address. It has the value 10101011.</td>
 </tr><tr><td>Dest Mac</td><td>: 6 bytes where to send to </td>
 </tr><tr><td>Source Mac</td><td>: 6 bytes where it came from </td>
 </tr><tr><td>Ether type</td><td>: is it ipv4=0x0800, ipv6=Ox86DD or arp=0x0806?</td>
@@ -202,3 +217,4 @@ ARP -a
 
 ---
 
+[questions](https://www.sanfoundry.com/computer-networks-questions-answers-data-link-layer/)
