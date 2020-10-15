@@ -1,5 +1,5 @@
 ## 6 Presentation
-The presentation layer is responsible for formatting and delivering data to the application layer for further processing or display. in other words, layer 6 makes the data presentable for applications to consume. 
+The presentation layer is responsible for formatting and delivering data to the application layer for further processing or display. in other words, layer 6 makes the data presentable for applications to consume. In many widely used applications and protocols, no distinction is made between the presentation and application layers. For example, HyperText Transfer Protocol (HTTP), generally regarded as an application-layer protocol, has presentation-layer aspects such as the ability to identify character encoding for proper conversion, which is then done in the application layer.
 
 The table below summarises the purpose of this layer
 
@@ -16,12 +16,11 @@ The table below summarises the purpose of this layer
 	<tr>
 		<td>Translate</td>
 		<td>Different machines may use different encoding schemes, so the applicaiton layer may need to translate data into a format that the Application Layer can consume. 
+		<ul>
+			<li>UTF8 -> ASCII </li>
+			<li>ASCII -> EBCDIC).</li>
+		</ul>
 		</td>
-<ul>
-	<li>UTF8 -> ASCII </li>
-	<li>ASCII -> EBCDIC).</li>
-</ul>	
-</td>
 	</tr>
 	<tr>
 		<td>Encryption/Decrypt</td>
@@ -48,7 +47,12 @@ The table below summarises the purpose of this layer
 	</tr>
 </table>
 
+---
 
+<br>
+<br>
+
+### Presentation Layer Protocols
 
 <table>
 	<thead>
@@ -63,25 +67,21 @@ The table below summarises the purpose of this layer
 			<td>ASCII</td>
 			<td>American Standard Code for Information Interchange</td>
 			<td></td>
-			<td>Web browser</td>
 		</tr>
 		<tr>
 			<td>HTML</td>
 			<td>Hypertext Markup Language</td>
 			<td>Default standard for language structuring web pages</td>
-			<td>Web browser</td>
 		</tr>
 		<tr>
-			<td>H</td>
-			<td>American Standard Code for Information Interchange</td>
+			<td>MPEG</td>
 			<td></td>
-			<td>Web browser</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>PNG</td>
 			<td>American Standard Code for Information Interchange</td>
 			<td></td>
-			<td>Web browser</td>
 		</tr>
 		
 		
