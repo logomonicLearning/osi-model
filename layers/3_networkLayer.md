@@ -112,7 +112,8 @@ do the following to see all the current computers on your Local Area Network (LA
 
 do the following check your current ip address do the 
 
-> ipconfig
+ipconfig
+
 > 
 
 do the following to see the ip address of a website
