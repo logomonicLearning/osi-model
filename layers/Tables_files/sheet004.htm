@@ -47,47 +47,43 @@ else
  collapse;table-layout:fixed;width:652pt'>
  <col width=133 style='mso-width-source:userset;mso-width-alt:4864;width:100pt'>
  <col width=106 style='mso-width-source:userset;mso-width-alt:3876;width:80pt'>
- <col class=xl134 width=139 style='mso-width-source:userset;mso-width-alt:5083;
+ <col class=xl114 width=139 style='mso-width-source:userset;mso-width-alt:5083;
  width:104pt'>
  <col width=98 style='mso-width-source:userset;mso-width-alt:3584;width:74pt'>
- <col class=xl134 width=392 style='mso-width-source:userset;mso-width-alt:14336;
+ <col class=xl114 width=392 style='mso-width-source:userset;mso-width-alt:14336;
  width:294pt'>
  <tr height=40 style='height:30.0pt'>
   <td height=40 width=133 style='height:30.0pt;width:100pt'></td>
-  <td class=xl130 width=106 style='width:80pt'></td>
-  <td class=xl135 width=139 style='width:104pt'>Protocol ID</td>
-  <td class=xl138 width=98 style='width:74pt'>Size <br>
+  <td class=xl115 width=106 style='width:80pt'></td>
+  <td class=xl100 width=139 style='width:104pt'>Protocol ID</td>
+  <td class=xl70 width=98 style='width:74pt'>Size <br>
     (Bytes/Octets)</td>
-  <td class=xl134 width=392 style='width:294pt'></td>
+  <td class=xl114 width=392 style='width:294pt'></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td rowspan=6 height=705 class=xl116 style='height:528.75pt'>header</td>
-  <td rowspan=2 class=xl82>addresses</td>
-  <td class=xl135 width=139 style='width:104pt'>DST MAC</td>
-  <td class=xl138></td>
-  <td class=xl134></td>
+  <td rowspan=2 class=xl117>addresses</td>
+  <td class=xl100 width=139 style='width:104pt'>DST MAC</td>
+  <td class=xl70></td>
+  <td class=xl114></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl135 width=139 style='height:15.0pt;width:104pt'>SRC MAC</td>
-  <td class=xl138></td>
-  <td class=xl134></td>
+  <td height=20 class=xl100 width=139 style='height:15.0pt;width:104pt'>SRC MAC</td>
+  <td class=xl70></td>
+  <td class=xl114></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
-  <td class=xl135 width=139 style='width:104pt'>Type/Length</td>
-  <td class=xl138></td>
-  <td class=xl134></td>
+  <td class=xl100 width=139 style='width:104pt'>Type/Length</td>
+  <td class=xl70></td>
+  <td class=xl114></td>
  </tr>
  <tr height=340 style='height:255.0pt'>
-  <td rowspan=3 height=645 class=xl83 style='height:483.75pt'>LLC</td>
-  <td class=xl138 width=139 style='width:104pt;font-size:11.0pt;color:black;
-  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
-  none;font-family:Calibri;background:#DBE5F1;mso-pattern:#DBE5F1 none'>DSAP
-  (Destination Service Access Point)</td>
-  <td style='font-size:11.0pt;color:black;font-weight:400;text-decoration:none;
-  text-underline-style:none;text-line-through:none;font-family:Calibri;
-  background:#DBE5F1;mso-pattern:#DBE5F1 none'>1</td>
-  <td class=xl156 width=392 style='width:294pt'>an 8-bit long field. This field
+  <td rowspan=3 height=645 class=xl118 style='height:483.75pt'>LLC</td>
+  <td class=xl119 width=139 style='width:104pt'>DSAP (Destination Service
+  Access Point)</td>
+  <td class=xl120 align=right>1</td>
+  <td class=xl121 width=392 style='width:294pt'>an 8-bit long field. This field
   functions as SSAP, but it contains the the value of the protocol to which
   data is addressed. SSAP and DSAP values must be the same because the protocol
   through which a message is generated in the source machine should be the same
@@ -104,14 +100,10 @@ else
   upper layers (transport layer).</td>
  </tr>
  <tr height=200 style='height:150.0pt'>
-  <td height=200 class=xl135 width=139 style='height:150.0pt;width:104pt;
-  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
-  none;text-line-through:none;font-family:Calibri;background:#DBE5F1;
-  mso-pattern:#DBE5F1 none'>SSAP (Source Service Access Point)</td>
-  <td style='font-size:11.0pt;color:black;font-weight:400;text-decoration:none;
-  text-underline-style:none;text-line-through:none;font-family:Calibri;
-  background:#DBE5F1;mso-pattern:#DBE5F1 none'>1</td>
-  <td class=xl134 width=392 style='width:294pt'>0x0800 means IPv4,<span
+  <td height=200 class=xl122 width=139 style='height:150.0pt;width:104pt'>SSAP
+  (Source Service Access Point)</td>
+  <td class=xl120 align=right>1</td>
+  <td class=xl114 width=392 style='width:294pt'>0x0800 means IPv4,<span
   style='mso-spacerun:yes'>  </span>0x8100 means 802.1Q tagged frame, 0x0806
   means ARP, and 0x86DD means IPv6. Thus, The SSAP indicates from which service
   the LLC data unit was sent. To put it another way, SSAP represents the logical
@@ -122,27 +114,18 @@ else
   which, for easy identification, puts its value 0x0800 in SSAP field.</td>
  </tr>
  <tr height=105 style='mso-height-source:userset;height:78.75pt'>
-  <td height=105 class=xl135 width=139 style='height:78.75pt;width:104pt;
-  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
-  none;text-line-through:none;font-family:Calibri;background:#DBE5F1;
-  mso-pattern:#DBE5F1 none'>Control</td>
-  <td style='font-size:11.0pt;color:black;font-weight:400;text-decoration:none;
-  text-underline-style:none;text-line-through:none;font-family:Calibri;
-  background:#DBE5F1;mso-pattern:#DBE5F1 none'>1 or 2</td>
-  <td class=xl134></td>
+  <td height=105 class=xl122 width=139 style='height:78.75pt;width:104pt'>Control</td>
+  <td class=xl120>1 or 2</td>
+  <td class=xl114></td>
  </tr>
  <tr height=200 style='height:150.0pt'>
-  <td rowspan=2 height=220 class=xl145 width=133 style='height:165.0pt;
+  <td rowspan=2 height=220 class=xl66 width=133 style='height:165.0pt;
   width:100pt'>SNAP Extension<br>
     (Subnetwork Access Protocol) frame:</td>
   <td></td>
-  <td class=xl134 width=139 style='width:104pt;font-size:11.0pt;color:black;
-  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
-  none;font-family:Calibri;background:#DBE5F1;mso-pattern:#DBE5F1 none'>OUI</td>
-  <td style='font-size:11.0pt;color:black;font-weight:400;text-decoration:none;
-  text-underline-style:none;text-line-through:none;font-family:Calibri;
-  background:#DBE5F1;mso-pattern:#DBE5F1 none'>3</td>
-  <td class=xl156 width=392 style='width:294pt'>3-byte field that SNAP frame
+  <td class=xl123 width=139 style='width:104pt'>OUI</td>
+  <td class=xl120 align=right>3</td>
+  <td class=xl121 width=392 style='width:294pt'>3-byte field that SNAP frame
   encompasses. If this field is assigned 000000 (hexadecimal), the ID is the
   Ethernet type (EtherType)<span style='mso-spacerun:yes'>  </span>field value
   for the protocol running on top of SNAP. But if the OUI field is an identifier
@@ -154,23 +137,16 @@ else
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
-  <td class=xl134 width=139 style='width:104pt;font-size:11.0pt;color:black;
-  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
-  none;font-family:Calibri;border-top:none;border-right:none;border-bottom:
-  .5pt solid #95B3D7;border-left:none;background:#DBE5F1;mso-pattern:#DBE5F1 none'>Protocol
-  ID</td>
-  <td style='font-size:11.0pt;color:black;font-weight:400;text-decoration:none;
-  text-underline-style:none;text-line-through:none;font-family:Calibri;
-  border-top:none;border-right:none;border-bottom:.5pt solid #95B3D7;
-  border-left:none;background:#DBE5F1;mso-pattern:#DBE5F1 none'>2</td>
-  <td class=xl134></td>
+  <td class=xl124 width=139 style='width:104pt'>Protocol ID</td>
+  <td class=xl125 align=right>2</td>
+  <td class=xl114></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl157 style='height:15.0pt'>Trailer</td>
+  <td height=20 class=xl126 style='height:15.0pt'>Trailer</td>
   <td>FCS</td>
-  <td class=xl134></td>
+  <td class=xl114></td>
   <td></td>
-  <td class=xl134></td>
+  <td class=xl114></td>
  </tr>
  <![if supportMisalignedColumns]>
  <tr height=0 style='display:none'>

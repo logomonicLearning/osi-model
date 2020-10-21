@@ -1,17 +1,19 @@
 
 .grid{
   display:grid;
-  
+
 }
 .osi{
   grid-template-rows: repeat(7,100px);
   grid-column-gap: 5px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px 2px grey;
 }
 
 .layer{
   grid-template-columns: 60px 100px auto;
-    border: 1px dashed #00f;
-    grid-column-gap: 30px;  
+  /* border: 1px dashed #00f; */
+  /* grid-column-gap: 30px; */
 }
 
 /* .layer__name:hover{
@@ -24,7 +26,7 @@
 
 .flex--center{
   align-items:center;
-  /* align-content:center; */
+  align-content:center;
   justify-content:center;
 }
 
@@ -37,8 +39,17 @@
   position: ;
 }
 
+.layer__description, .layer__name, .layer__number{
+  border:1px solid green;
+}
+
 .stretch{
   width:100%;
 }
 
+embed{
+  width:100%;
+  height:400px;
+}
+/*changes*/
 

@@ -1,6 +1,17 @@
 
 # Application Layer (Layer 7)
+
+
+
+## main terms
+
+
+---
+
 The application layer is the closest OSI layer to the end user as it is the only one that users directly interact with. It provides user interfaces and protocols for applications to communicate over a network such as email, remote file access and transfer, shared database management and other types of distributed information services. the port number provided by the transport layer helps data to reach it's intended application. port is a way to uniquely identify a process on a system. each protocol has it's own associated port number.
+
+
+
 
 Application Layer protocol Defines:
 <table>
@@ -25,6 +36,16 @@ Application Layer protocol Defines:
 	</tr>
 </table>
 See the table below for some common protocols and their purpose:
+
+
+<iframe src="https://youtu.be/hPF4eIrICKQ">
+	
+</iframe>
+
+
+---
+
+## PROTOCOLS
 
 <table>
 	<thead>
