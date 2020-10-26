@@ -1,15 +1,20 @@
 <script src="formatter.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    p:first-letter{
+        text-transform:capitalize;
+    }
 
+</style>
 # HISTORY OF THE INTERNET
 
 In the early and mid-1970s, networking was either government-sponsored <span style="display:none">(NPL network in the UK, ARPANET in the US, CYCLADES in France)</span> or vendor-developed with proprietary standards<span style="display:none">, such as IBM's Systems Network Architecture and Digital Equipment Corporation's DECnet</span>. Public data networks emerge shortly after in the late 1970s, using the X.25 standard.
 
 <span style="display:none">The Experimental Packet Switched System in the UK circa 1973-5 identified the need for defining higher level protocols.[1] The UK National Computing Centre publication 'Why Distributed Computing' which came from considerable research into future configurations for computer systems,[3] resulted in the UK presenting the case for an international standards committee to cover this area at the ISO meeting in Sydney in March 1977.[4]</span>
 
-the internet is a group of interconnected networks vs www a way of making it easier to make sharing easier with these interconnected computers. until the 1960s, mainframes processed tasks one at a time. with time sharing, connected could process several tasks at a time so could be used by several scientists at once.  
+The internet is a group of interconnected networks vs www a way of making it easier to make sharing easier with these interconnected computers. until the 1960s, mainframes processed tasks one at a time. with time sharing, connected could process several tasks at a time so could be used by several scientists at once.  
 
-packet switching, didnt get funding. cutting up data and rearranging it at the other end
+Packet switching, didnt get funding. cutting up data and rearranging it at the other end
 
 French: Ciclades. didnt have a big budget so decided to work on direct connection between computers as opposed to gateway computers. 
 
