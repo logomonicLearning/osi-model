@@ -94,6 +94,9 @@ Networks consist of
 </tr>
 </tbody>
 </table>
+
+<embed src="https://www.youtube.com/embed/Itwk3BJ4GPY"></embed>
+
 ---
 
 ## [NETWORK Topologies](https://www.youtube.com/watch?v=uSKdjjw5zow)
