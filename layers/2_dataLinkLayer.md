@@ -1,6 +1,13 @@
-## 2 Data Link - IEEE 802 (Data link and physical standards)
+<script src="formatter.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-### Key Terms
+# 2 Data Link - IEEE 802 (Data link and physical standards)
+
+<div id="TOC">
+TABLE OF CONTENT:
+</div>
+
+## KEY TERMS
 
 - Mac Address: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is either separated by a hyphen (-), colon (:) or dot (.). The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
 <table style="text-align:center">
@@ -23,13 +30,11 @@
 
 - Frame: A frame is a DPU created on the Data Link layer and has source and destination MAC addresses,  FCS : Frame Check Sequence Stop frame : (Optional) when field length is not used 
 - NIC: network interface card.
-
-
 L2 Data Link Layer(DLL): It is considered to be the most complex layer in the OSI model. It consists of 2 sublayers which will be discussed separately in this article:
-
 - Logic Link Controller(LLC): the mediator between the network layer above and the MAC sublayer below. 
 - Media Access Controller( MAC) communicates with the physical layer below and the LLC sublayer above it;  
 
+---
 
 <span style="display:none">
 The data link layer is very similar to the network layer, except the data link layer facilitates data transfer between two devices on the SAME network. The data link layer takes packets from the network layer and breaks them into smaller pieces called frames. Like the network layer, the data link layer is also responsible for flow control and error control in intra-network communication (The transport layer only does flow control and error control for inter-network communications).<br/><br/>
@@ -76,7 +81,7 @@ Duties usually are logical addressing (network layer), physical addressing (data
 
 
 
-### Logic Link Control (LLC) 802.2 (implemented in software)
+## Logic Link Control (LLC) 802.2 (implemented in software)
 The LLC is the upper sublayer of the LLC which acts as an interface between the MAC sublayer and the network layer. <span style="display:none">LLC is very similar to several famous data link protocols, like Synchronous Data Link Control (SDLC) or High Level Data Link Control (HDLC) protocols. </span> The LLC includes the <span style="color:blue">service access points (SAP)</span> information in the frame to allow multiple applications to communicate simultaneously with other applications on the local machine or other stations on the network. 
 
 
@@ -121,7 +126,7 @@ controls the hardware responsible for interaction with the wired, optical or wir
 
 ---
 
-### Media Access Control (abstraction to hardware) MAC: 
+## Media Access Control (abstraction to hardware) MAC: 
 
 MAC is the lower sublayer of the DLL. It is responsible for the transmission of data packets to and from the  NIC, and to and from another remotely shared channel. It is also involved in flow control and multiplexing for the transmission medium. 
 
@@ -189,7 +194,7 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
 
 ---
 
-### parts of a header
+## parts of a header
 <table>
 <tr><td>Start Frame Delimiter (SFD) </td><td>is the 8-bit (1-byte) value marking the end of the preamble of an Ethernet frame. The SFD is immediately followed by the destination MAC address. It has the value 10101011.</td>
 </tr>

@@ -1,6 +1,14 @@
+<script src="formatter.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
 # Network layer
 
-## terms
+<div id="TOC">
+TABLE OF CONTENT:
+</div>
+
+
+## KEY TERMS
 
 - Local forwarding table: examnes the header to determine the destination, lookup and send the packets on the appropriate outgoing link. the forwarding gets created by a routing algorithm
 - routing algorithm: knows the global decisions and create the local decisions to support the global goals. it is used to create the forwarding table.
@@ -10,6 +18,7 @@
     Main duties of this layer usually are logical addressing (IPv4, IPv6, mask, IP), routing (to whom send packets), Path determination (Open Shortest Path First, Border Gateway Protocol, intermediate system-intermediate system).
 </span>
 
+---
 
 
 The network layer is responsible for facilitating data transfer between two different networks throught a router. This layer is not needed however if the target machine is on the same local area network. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender’s device, and reassembling these packets on the receiving device. the network layer is point-to-point in contrast to the Transport layer which is an end-to-end. this basically means??? data is encapsulated with the sender and recievers ip addressed to be sent over WAN and decapsulated them to be sent to upper layers.

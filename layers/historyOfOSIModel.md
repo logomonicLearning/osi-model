@@ -1,45 +1,5 @@
-<script type="text/javascript">
-    window.addEventListener('DOMContentLoaded',function(){
-        const headings=[...document.querySelectorAll('h2')]
-        
-    const toc=document.getElementById('TOC');
-
-    headings.forEach(el=>{
-        // console.log(el)
-            let link=document.createElement('a')
-            link.textContent=el.innerText.replace('', '')
-            link.href='#'.concat(el.id);
-            toc.appendChild(link)
-        }
-    )
-    const links=[...document.querySelectorAll('a')];
-    links.forEach((el,idx)=>{
-        el.target='__blank'
-    })
-})
-</script>
-<script src="osiSimple/data.js" type="text/javascript"></script>
-<script src="osiSimple/logic.js" type="text/javascript"></script>
-<style type="text/css">
-    h1,h2,h3,h4{
-        color:#167ac6;      
-        text-transform: uppercase;
-        /*margin-top:50px;*/
-    }
-    
-    #TOC{
-        display:flex;
-        flex-direction:column;
-    }
-
-    .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-        margin-top: 50px;
-        margin-bottom: 15px;
-        line-height: 1.1;
-    }
-
-</style>
-<link rel="stylesheet" type="text/css" href="osiSimple/style.css">
+<script src="formatter.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 # HISTORY OF THE INTERNET
 
@@ -47,7 +7,21 @@ In the early and mid-1970s, networking was either government-sponsored <span sty
 
 <span style="display:none">The Experimental Packet Switched System in the UK circa 1973-5 identified the need for defining higher level protocols.[1] The UK National Computing Centre publication 'Why Distributed Computing' which came from considerable research into future configurations for computer systems,[3] resulted in the UK presenting the case for an international standards committee to cover this area at the ISO meeting in Sydney in March 1977.[4]</span>
 
+the internet is a group of interconnected networks vs www a way of making it easier to make sharing easier with these interconnected computers. until the 1960s, mainframes processed tasks one at a time. with time sharing, connected could process several tasks at a time so could be used by several scientists at once.  
 
+packet switching, didnt get funding. cutting up data and rearranging it at the other end
+
+French: Ciclades. didnt have a big budget so decided to work on direct connection between computers as opposed to gateway computers. 
+
+1975: all these networks communicated with different protocols. so TCP was made to standardise communication. 
+
+1972: email was developed by arpanet.
+
+all this communication was text based and ugly to look at. 
+
+1980s: Timothy Berners-Lee brit, spent time with cern nuclear research. want4ed to manage dthe scientists information allowing them to share infor so that they could make quicker progress. made an interface using http, html and url that made internet browsers possible calling it the world wide web. he made the first website. [site to the first website]() 
+
+## beginning of the OSI
 Beginning in 1977, the International Organization for Standardization (ISO) conducted a program to develop general standards and methods of networking. Meanwhile in France, the International Telegraph and Telephone Consultative Committee (CCITT) were developing similar networking model. The OSI model was first defined in raw form in Washington, DC in February 1978 by Hubert Zimmermann of France and the refined but still draft standard was published by the ISO in 1980. Although not a standard itself, it was a framework in which future standards could be defined. as <span style="display:none"> The drafters of the reference model had to contend with many competing priorities and interests.</span> The rate of technological change made it necessary to define standards that new systems could converge to rather than standardizing procedures after the fact;<span style="display:none"> the reverse of the traditional approach to developing standards.[6]</span> 
 
 In 1983, the CCITT and ISO documents were merged to form The Basic OSI Reference Model <span style="display:none">, OSI Reference Model, or simply OSI model,  </span> and was published in 1984 by both the ISO, as <a href="">standard ISO 7498</a>, and the CCITT as standard <a href="">X.200</a>. It promoted the idea of a consistent model of protocol layers, defining interoperability between network devices and software.

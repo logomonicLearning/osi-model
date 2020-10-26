@@ -1,19 +1,27 @@
-## 4 Transport layer
+<script src="formatter.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-<span style="display:none">
-	This layer is separated by two protocols like Transport Control Protocol and User Datagram Protocol. TCP is following connection-oriented transmission. It's slower but provides feedback (HTTP, FTP, etc). UDP is following connectionless transmission. It's faster but doesn't provide feedback and used when we don't care about the fullness of data (video games, music, movies, etc.).
-	Layer 4 is responsible for end-to-end communication between the two devices. This includes taking data from the session layer and breaking it up into chunks called segments (or datagrams in case of UDP) before sending it to layer 3. The transport layer on the receiving device is responsible for reassembling the segments into data the session layer can consume.
-	The transport layer is also responsible for flow control and error control,. Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn’t overwhelm a receiver with a slow connection. The transport layer performs error control on the receiving end by ensuring that the data received is complete , and checks checksums of data units and make use of automatic repeat request if it isn’t.
-</span>
+# 4 Transport layer
 
+<div id="TOC">
+TABLE OF CONTENT:
+</div>
 
-## terms 
+## KEY TERMS
 
 - segment
 - checksum
 - transmission
 - windowing
 - socket	: interface for Transport layer protocols
+
+---
+
+<span style="display:none">
+	This layer is separated by two protocols like Transport Control Protocol and User Datagram Protocol. TCP is following connection-oriented transmission. It's slower but provides feedback (HTTP, FTP, etc). UDP is following connectionless transmission. It's faster but doesn't provide feedback and used when we don't care about the fullness of data (video games, music, movies, etc.).
+	Layer 4 is responsible for end-to-end communication between the two devices. This includes taking data from the session layer and breaking it up into chunks called segments (or datagrams in case of UDP) before sending it to layer 3. The transport layer on the receiving device is responsible for reassembling the segments into data the session layer can consume.
+	The transport layer is also responsible for flow control and error control,. Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn’t overwhelm a receiver with a slow connection. The transport layer performs error control on the receiving end by ensuring that the data received is complete , and checks checksums of data units and make use of automatic repeat request if it isn’t.
+</span>
 
 the transport layer is at the center of the protocols between the upper layers and thelower layers. As the name suggests, it is responsible for transporting  data over a network by segmenting data into managable segments. the most common being TCP and UDP.  other protocols may provide additional capabilities. error recovery, data flow and retransmission.
 
@@ -48,19 +56,17 @@ See the table below for a list of its main functions:
 </tbody>
 </table>
 
-## Main protorols
+---
 
-### TCP
+## TCP
 [requires diagram]
 SYN
 ACK + SYN
 ACK
 
+---
 
-### UDP
-
-
-
+## UDP
 
 
 See the table below for a detailed comparison between TCP and UDP
@@ -104,9 +110,9 @@ See the table below for a detailed comparison between TCP and UDP
 	</tbody>
 </table>
 
-
+---
  
-Excercise:
+## Excercise:
 
 to see the type of protocols established on your computer while connected to the internet type netstat on the command line.
 

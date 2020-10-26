@@ -1,44 +1,7 @@
-<script type="text/javascript">
-	window.addEventListener('DOMContentLoaded',function(){
-		const headings=[...document.querySelectorAll('h2')]
-		
-	const toc=document.getElementById('TOC');
-
-	headings.forEach(el=>{
-		// console.log(el)
-			let link=document.createElement('a')
-			link.textContent=el.innerText.replace('', '')
-			link.href='#'.concat(el.id);
-			toc.appendChild(link)
-		}
-	)
-	const links=[...document.querySelectorAll('a')];
-	links.forEach((el,idx)=>{
-		el.target='__blank'
-	})
-})
-</script>
+<script src="formatter.js"></script>
 <script src="osiSimple/data.js" type="text/javascript"></script>
 <script src="osiSimple/logic.js" type="text/javascript"></script>
-<style type="text/css">
-	h1,h2,h3,h4{
-		color:#167ac6;		
-		text-transform: uppercase;
-		/*margin-top:50px;*/
-	}
-	
-	#TOC{
-		display:flex;
-		flex-direction:column;
-	}
-
-	.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-	    margin-top: 50px;
-	    margin-bottom: 15px;
-	    line-height: 1.1;
-	}
-
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="osiSimple/style.css">
 
 # INTRODUCTION TO THE OPEN SYSTEMS INTERCONNECTION (OSI) MODEL
@@ -65,7 +28,7 @@ TABLE OF CONTENT:
 
 ## COMPONENTS OF THE INTERNET.
 
-The internet is the physical infrastructure which enables communication between distributed applications such as the web, voip, games etc. it also provides communication services between two hosts on a network. Outlined below are it's main components:
+The internet is the physical infrastructure which enables communication between distributed applications such as the web, voip and games. It also provides communication services between two hosts on a network. Outlined below are it's main components:
 
 <table>
 <thead>

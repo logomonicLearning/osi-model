@@ -26,7 +26,7 @@ function fnUpdateTabs()
   if (parent.window.g_iIEVer>=4) {
    if (parent.document.readyState=="complete"
     && parent.frames['frTabs'].document.readyState=="complete")
-   parent.fnSetActiveSheet(9);
+   parent.fnSetActiveSheet(16);
   else
    window.setTimeout("fnUpdateTabs();",150);
  }
@@ -43,31 +43,14 @@ else
 
 <body link=blue vlink=purple>
 
-<table border=0 cellpadding=0 cellspacing=0 width=380 style='border-collapse:
- collapse;table-layout:fixed;width:286pt'>
- <col width=158 span=2 style='mso-width-source:userset;mso-width-alt:5778;
- width:119pt'>
+<table border=0 cellpadding=0 cellspacing=0 width=64 style='border-collapse:
+ collapse;table-layout:fixed;width:48pt'>
  <col width=64 style='width:48pt'>
- <tr height=45 style='mso-height-source:userset;height:33.75pt'>
-  <td colspan=2 height=45 class=xl189 width=316 style='height:33.75pt;
-  width:238pt'>MAC Address</td>
-  <td class=xl186 width=64 style='width:48pt'>&nbsp;</td>
- </tr>
- <tr height=24 style='height:18.0pt'>
-  <td colspan=2 height=24 class=xl191 width=316 style='height:18.0pt;
-  width:238pt'>00-1A-7D<font class="font11">-</font><font class="font41">DF-61-8B</font></td>
-  <td></td>
- </tr>
- <tr height=47 style='height:35.25pt'>
-  <td height=47 class=xl187 width=158 style='height:35.25pt;width:119pt'>Manufacturer
-  (3bytes)</td>
-  <td class=xl188 width=158 style='width:119pt'>Unique Identifyer (3bytes)</td>
-  <td></td>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 width=64 style='height:15.0pt;width:48pt'></td>
  </tr>
  <![if supportMisalignedColumns]>
  <tr height=0 style='display:none'>
-  <td width=158 style='width:119pt'></td>
-  <td width=158 style='width:119pt'></td>
   <td width=64 style='width:48pt'></td>
  </tr>
  <![endif]>

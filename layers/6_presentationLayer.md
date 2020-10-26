@@ -1,4 +1,17 @@
-## 6 Presentation
+<script src="formatter.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+# 6 PRESENTATION LAYER
+
+<div id="TOC">
+TABLE OF CONTENT:
+</div>
+
+## KEY TERMS
+
+
+---
+
 The presentation layer is responsible for formatting and delivering data to the application layer for further processing or display. in other words, layer 6 makes the data presentable for applications to consume. In many widely used applications and protocols, no distinction is made between the presentation and application layers. For example, HyperText Transfer Protocol (HTTP), generally regarded as an application-layer protocol, has presentation-layer aspects such as the ability to identify character encoding for proper conversion, which is then done in the application layer.
 
 The table below summarises the purpose of this layer
@@ -52,7 +65,7 @@ The table below summarises the purpose of this layer
 <br>
 <br>
 
-### Presentation Layer Protocols
+## Presentation Layer Protocols
 
 <table>
 	<thead>
@@ -96,8 +109,9 @@ ASCII
 <td>A-7</td><td>65</td>
 <td></td><td>97</td>
 
+---
 
-Excercise:
+## Excercise:
 
 To better understand encryption do the following:
 open the console in your browser and type the following in the console:

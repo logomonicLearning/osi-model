@@ -1,18 +1,26 @@
+<script src="formatter.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-## 5 Session
+# 5 SESSION LAYER
 
-## TERMS
+<div id="TOC">
+TABLE OF CONTENT:
+</div>
+
+## KEY TERMS
 
 - Session : The time between when the communication is opened and closed 
 - Authentication
 - Authorisation
+
+---
 
 <span style="display:none">
 This is the layer responsible for opening and closing communication between the two devices. The time between when the communication is opened and closed is known as the session. The session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources.
 The session layer also synchronizes data transfer with checkpoints. For example, if a 100 megabyte file is being transferred, the session layer could set a checkpoint every 5 megabytes. In the case of a disconnect or a crash after 52 megabytes have been transferred, the session could be resumed from the last checkpoint, meaning only 50 more megabytes of data need to be transferred. Without the checkpoints, the entire transfer would have to begin again from scratch. 
 Usually, the main tasks of L5 is authentication and authorisation, downloads files as data packets, session management.
 </span>
----
+
 
 Session layer is important for connecting processeses running on diffrent stations over a network. It supports multiple types of connections and authentication. and reconnection if an error should occure.
 See the table below for a list of its main functions:
