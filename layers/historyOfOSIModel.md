@@ -21,6 +21,11 @@ all this communication was text based and ugly to look at.
 
 1980s: Timothy Berners-Lee brit, spent time with cern nuclear research. want4ed to manage dthe scientists information allowing them to share infor so that they could make quicker progress. made an interface using http, html and url that made internet browsers possible calling it the world wide web. he made the first website. [site to the first website]() 
 
+<embed width=500 height=300 src="https://www.youtube.com/embed/h8K49dD52WA
+"></embed>
+
+---
+
 ## beginning of the OSI
 Beginning in 1977, the International Organization for Standardization (ISO) conducted a program to develop general standards and methods of networking. Meanwhile in France, the International Telegraph and Telephone Consultative Committee (CCITT) were developing similar networking model. The OSI model was first defined in raw form in Washington, DC in February 1978 by Hubert Zimmermann of France and the refined but still draft standard was published by the ISO in 1980. Although not a standard itself, it was a framework in which future standards could be defined. as <span style="display:none"> The drafters of the reference model had to contend with many competing priorities and interests.</span> The rate of technological change made it necessary to define standards that new systems could converge to rather than standardizing procedures after the fact;<span style="display:none"> the reverse of the traditional approach to developing standards.[6]</span> 
 
@@ -32,8 +37,9 @@ The concept of a seven-layer model was provided by the work of Charles Bachman a
 
 ---
 
-<embed width=500 height=300 src="https://www.youtube.com/embed/9hIQjrMHTv4
-"></embed>
+<!-- <embed width=500 height=300 src="https://www.youtube.com/embed/9hIQjrMHTv4
+"></embed> -->
+
 
 ---
 

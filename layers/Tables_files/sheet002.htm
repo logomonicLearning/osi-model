@@ -10,7 +10,13 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <link rel=File-List href=filelist.xml>
 <link rel=Stylesheet href=stylesheet.css>
 <style>
-<!--table
+<!--td:hover
+	{opacity:0.5;
+	cursor:pointer;}
+tr
+	{opacity:0.5;
+	cursor:pointer;}
+table
 	{mso-displayed-decimal-separator:"\.";
 	mso-displayed-thousand-separator:"\,";}
 @page
@@ -41,30 +47,29 @@ else
 <![endif]>
 </head>
 
-<body link=blue vlink=purple class=xl100>
+<body link=blue vlink=purple class=xl93>
 
 <table border=0 cellpadding=0 cellspacing=0 width=942 style='border-collapse:
  collapse;table-layout:fixed;width:707pt'>
- <col class=xl100 width=98 style='mso-width-source:userset;mso-width-alt:3584;
+ <col class=xl93 width=98 style='mso-width-source:userset;mso-width-alt:3584;
  width:74pt'>
- <col class=xl100 width=187 style='mso-width-source:userset;mso-width-alt:6838;
+ <col class=xl93 width=187 style='mso-width-source:userset;mso-width-alt:6838;
  width:140pt'>
- <col class=xl100 width=593 style='mso-width-source:userset;mso-width-alt:21686;
+ <col class=xl93 width=593 style='mso-width-source:userset;mso-width-alt:21686;
  width:445pt'>
- <col class=xl100 width=64 style='width:48pt'>
- <tr height=41 style='height:30.75pt'>
-  <td height=41 class=xl100 width=98 style='height:30.75pt;width:74pt'>Sub
-  Layer</td>
-  <td class=xl101 width=187 style='width:140pt'>Function</td>
-  <td class=xl102 width=593 style='width:445pt'>Description</td>
-  <td class=xl100 width=64 style='width:48pt'>Further Reading</td>
+ <col class=xl93 width=64 style='width:48pt'>
+ <tr class=xl94 height=41 style='height:30.75pt'>
+  <td height=41 class=xl93 width=98 style='height:30.75pt;width:74pt'>Sub Layer</td>
+  <td class=xl95 width=187 style='width:140pt'>Function</td>
+  <td class=xl96 width=593 style='width:445pt'>Description</td>
+  <td class=xl93 width=64 style='width:48pt'>Further Reading</td>
  </tr>
- <tr height=208 style='height:156.0pt'>
-  <td rowspan=6 height=1222 class=xl70 width=98 style='height:916.5pt;
-  width:74pt'>LLC IEEE(802.2)</td>
-  <td class=xl103 width=187 style='width:140pt'>connection &amp; connectionless
+ <tr class=xl94 height=208 style='height:156.0pt'>
+  <td height=208 class=xl97 width=98 style='height:156.0pt;width:74pt'>LLC
+  IEEE(802.2)</td>
+  <td class=xl98 width=187 style='width:140pt'>connection &amp; connectionless
   services</td>
-  <td class=xl104 width=593 style='width:445pt'>Unacknowledged connectionless
+  <td class=xl99 width=593 style='width:445pt'>Unacknowledged connectionless
   services, in this case, a work station sends frames to the destination
   workstation without waiting for confiriamtion. Connection orien. Acknowledge
   connectionless service in this service as before, no connection is established
@@ -76,13 +81,13 @@ else
   </span>workstatuion must first install an virtual circuit with it. also
   confirmation of each frame being transmitted is also made.<span
   style='mso-spacerun:yes'> </span></td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=530 style='height:397.5pt'>
-  <td height=530 class=xl105 width=187 style='height:397.5pt;width:140pt'>Synchronisation
-  &amp;<br>
+ <tr class=xl94 height=530 style='height:397.5pt'>
+  <td height=530 class=xl94 width=98 style='height:397.5pt;width:74pt'>&nbsp;</td>
+  <td class=xl100 width=187 style='width:140pt'>Synchronisation &amp;<br>
     Error detection</td>
-  <td class=xl104 width=593 style='width:445pt'>sender and reciever need to
+  <td class=xl99 width=593 style='width:445pt'>sender and reciever need to
   coordinate when a data frame is transmitted. Three approaches: <br>
     LLC uses the CRC field to detect errors When it provides a
   connection-oriented or an acknowledged connectionless service using the the
@@ -107,13 +112,15 @@ else
     3 Synchronous: Sender and reciever share clocking over a separate
   communications channel. using Cyclical Redundancy Check (CRC) most common
   device is an Ethernet Switch</td>
-  <td class=xl106 width=64 style='width:48pt'><a
+  <td class=xl101 width=64 style='width:48pt'><a
   href="https://www.tutorialspoint.com/error-detection-and-correction-in-data-link-layer"
   target="_parent">https://www.tutorialspoint.com/error-detection-and-correction-in-data-link-layer</a></td>
  </tr>
- <tr height=300 style='height:225.0pt'>
-  <td height=300 class=xl107 width=187 style='height:225.0pt;width:140pt'>SAP</td>
-  <td class=xl108 width=593 style='width:445pt'>Bridge between hardware and
+ <tr class=xl94 height=300 style='height:225.0pt'>
+  <td height=300 class=xl94 width=98 style='height:225.0pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl102 width=187 style='width:140pt'>SAP</td>
+  <td class=xl103 width=593 style='width:445pt'>Bridge between hardware and
   software. supports Network layer with<span style='mso-spacerun:yes'> 
   </span>SAP-Service Access Points. The LLC sublayer sits above the MAC
   sublayer and acts as a liaison between the upper layers and the protocols
@@ -128,71 +135,80 @@ else
     In IEEE 802.3x-1997, the IEEE Ethernet standard was changed to explicitly
   allow the use of the 16-bit field after the MAC addresses to be used as a
   length field or a type field.<span style='mso-spacerun:yes'> </span></td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=70 style='height:52.5pt'>
-  <td height=70 class=xl103 width=187 style='height:52.5pt;width:140pt'>Frame
-  flow control:</td>
-  <td class=xl104 width=593 style='width:445pt'>Takes Network protocol data and
+ <tr class=xl94 height=70 style='height:52.5pt'>
+  <td height=70 class=xl94 width=98 style='height:52.5pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl98 width=187 style='width:140pt'>Frame flow control:</td>
+  <td class=xl99 width=593 style='width:445pt'>Takes Network protocol data and
   adds control information to help deliver the packets to the right
   destination. Stream control refers to the network layer. E.g. If the sender
   is sending at higher rate than reciever, it will adjust</td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl100 width=187 style='height:15.75pt;width:140pt'>ARQ</td>
-  <td colspan=2 class=xl100 style='mso-ignore:colspan'></td>
+ <tr class=xl94 height=21 style='height:15.75pt'>
+  <td height=21 class=xl94 width=98 style='height:15.75pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl93 width=187 style='width:140pt'>ARQ</td>
+  <td colspan=2 class=xl93 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=93 style='height:69.75pt'>
-  <td height=93 class=xl109 width=187 style='height:69.75pt;width:140pt'>multiplexing:</td>
-  <td class=xl110 width=593 style='width:445pt'>makes it possible for several
+ <tr class=xl94 height=93 style='height:69.75pt'>
+  <td height=93 class=xl94 width=98 style='height:69.75pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl104 width=187 style='width:140pt'>multiplexing:</td>
+  <td class=xl105 width=593 style='width:445pt'>makes it possible for several
   network protocols (e.g. IP, IPX, Decnet, . EtherType, 802.1Q VLAN and
   Appletalk) to coexist within a multipoint network and to be transported over
   the same network medium. E.g can run ipv4 and ipv6 simultaneously.</td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td rowspan=6 height=200 class=xl70 width=98 style='height:150.0pt;
-  width:74pt'>MAC</td>
-  <td class=xl100 width=187 style='width:140pt'>Framing</td>
-  <td class=xl100 width=593 style='width:445pt'>Adds header and trailer to the
+ <tr class=xl94 height=21 style='height:15.75pt'>
+  <td height=21 class=xl97 width=98 style='height:15.75pt;width:74pt'>MAC</td>
+  <td class=xl93 width=187 style='width:140pt'>Framing</td>
+  <td class=xl93 width=593 style='width:445pt'>Adds header and trailer to the
   PDU</td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=40 style='height:30.0pt'>
-  <td height=40 class=xl100 width=187 style='height:30.0pt;width:140pt'>Media
-  access control</td>
-  <td class=xl100 width=593 style='width:445pt'>Method of trnasmitting on the
+ <tr class=xl94 height=41 style='height:30.75pt'>
+  <td height=41 class=xl94 width=98 style='height:30.75pt;width:74pt'>&nbsp;</td>
+  <td class=xl93 width=187 style='width:140pt'>Media access control</td>
+  <td class=xl93 width=593 style='width:445pt'>Method of trnasmitting on the
   medium. E.g. Token ring, CSMA/CD with ethernet. Multiple devices accessing
   the same medium.</td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl100 width=187 style='height:15.0pt;width:140pt'>Error
-  control</td>
-  <td colspan=2 class=xl100 style='mso-ignore:colspan'></td>
+ <tr class=xl94 height=21 style='height:15.75pt'>
+  <td height=21 class=xl94 width=98 style='height:15.75pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl93 width=187 style='width:140pt'>Error control</td>
+  <td colspan=2 class=xl93 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl100 width=187 style='height:15.0pt;width:140pt'>Physical/MAC
-  addressing</td>
-  <td colspan=2 class=xl100 style='mso-ignore:colspan'></td>
+ <tr class=xl94 height=21 style='height:15.75pt'>
+  <td height=21 class=xl94 width=98 style='height:15.75pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl93 width=187 style='width:140pt'>Physical/MAC addressing</td>
+  <td colspan=2 class=xl93 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl100 width=187 style='height:15.0pt;width:140pt'>Logical
-  Topology</td>
-  <td class=xl100 width=593 style='width:445pt'>e.g. An ethernet hub has all
+ <tr class=xl94 height=21 style='height:15.75pt'>
+  <td height=21 class=xl94 width=98 style='height:15.75pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl93 width=187 style='width:140pt'>Logical Topology</td>
+  <td class=xl93 width=593 style='width:445pt'>e.g. An ethernet hub has all
   ports on the same segment logically it is<span style='mso-spacerun:yes'> 
   </span>just like a bus.</td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
- <tr height=80 style='height:60.0pt'>
-  <td height=80 class=xl100 width=187 style='height:60.0pt;width:140pt'>Routing</td>
-  <td class=xl100 width=593 style='width:445pt'>The MAC layer routes packets
+ <tr class=xl94 height=81 style='height:60.75pt'>
+  <td height=81 class=xl94 width=98 style='height:60.75pt;border-top:none;
+  width:74pt'>&nbsp;</td>
+  <td class=xl93 width=187 style='width:140pt'>Routing</td>
+  <td class=xl93 width=593 style='width:445pt'>The MAC layer routes packets
   from a sender to a receiver along a common path. It makes sure the message
   arrives at the intended recipient. The MAC layer adds a physical address,
   defining the intended recipient machine, and controls shared access to a resource.
   For example, control of TDMA operation<span style='mso-spacerun:yes'> </span></td>
-  <td class=xl100></td>
+  <td class=xl93></td>
  </tr>
  <![if supportMisalignedColumns]>
  <tr height=0 style='display:none'>

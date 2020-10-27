@@ -19,7 +19,13 @@ x\:* {behavior:url(#default#VML);}
 <![endif]-->
 <link rel=Stylesheet href=stylesheet.css>
 <style>
-<!--table
+<!--td:hover
+	{opacity:0.5;
+	cursor:pointer;}
+tr
+	{opacity:0.5;
+	cursor:pointer;}
+table
 	{mso-displayed-decimal-separator:"\.";
 	mso-displayed-thousand-separator:"\,";}
 @page
@@ -147,177 +153,180 @@ document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
  <col width=116 style='mso-width-source:userset;mso-width-alt:4242;width:87pt'>
  <col width=142 style='mso-width-source:userset;mso-width-alt:5193;width:107pt'>
  <col width=223 style='mso-width-source:userset;mso-width-alt:8155;width:167pt'>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 width=37 style='height:15.0pt;width:28pt'></td>
-  <td colspan=6 class=xl127 width=1011 style='width:759pt'>4 Bytes (32 bits)</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 width=37 style='height:15.75pt;width:28pt'></td>
+  <td colspan=6 class=xl125 width=1011 style='border-right:1.0pt solid blue;
+  width:759pt'>4 Bytes (32 bits)</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
-  <td rowspan=5 height=250 class=xl128 style='height:187.5pt'>Header : 20 Byte
-  Header</td>
-  <td colspan=3 class=xl130 style='border-right:.5pt solid black;border-left:
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
+  <td height=50 class=xl122 style='height:37.5pt'>Header : 20 Byte Header</td>
+  <td colspan=3 class=xl128 style='border-right:.5pt solid black;border-left:
   none'>source<span style='mso-spacerun:yes'>  </span>Port<![if !supportAnnotations]><span
   class=msocomspan1><span class=msocomspan2 id="_anchor_1"
   onmouseover="msoCommentShow('_com_1','_anchor_1')"
   onmouseout="msoCommentHide('_com_1')" language=JavaScript><a
   class=msocomanch href="#_msocom_1" name="_msoanchor_1">[1]</a></span></span><![endif]></td>
-  <td colspan=3 class=xl132 style='border-right:.5pt solid black;border-left:
+  <td colspan=3 class=xl130 style='border-right:1.0pt solid blue;border-left:
   none'>Destination Port</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
-  <td colspan=6 height=50 class=xl130 style='border-right:.5pt solid black;
-  height:37.5pt;border-left:none'>Sequence Number</td>
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
+  <td height=50 class=xl107 style='height:37.5pt'>&nbsp;</td>
+  <td colspan=6 class=xl132 style='border-right:1.0pt solid blue;border-left:
+  none'>Sequence Number</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
-  <td colspan=6 height=50 class=xl130 style='border-right:.5pt solid black;
-  height:37.5pt;border-left:none'>Acknowledge number</td>
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
+  <td height=50 class=xl107 style='height:37.5pt;border-top:none'>&nbsp;</td>
+  <td colspan=6 class=xl132 style='border-right:1.0pt solid blue;border-left:
+  none'>Acknowledge number</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
-  <td height=50 class=xl125 style='height:37.5pt'>data offset<span
-  style='mso-spacerun:yes'>  </span>(4 bit)</td>
-  <td class=xl125>Reserved (4bit)</td>
-  <td class=xl125>TCP Flags(8bit)</td>
-  <td colspan=3 class=xl130 style='border-right:.5pt solid black;border-left:
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
+  <td height=50 class=xl107 style='height:37.5pt;border-top:none'>&nbsp;</td>
+  <td class=xl123>data offset<span style='mso-spacerun:yes'>  </span>(4 bit)</td>
+  <td class=xl123>Reserved (4bit)</td>
+  <td class=xl123>TCP Flags(8bit)</td>
+  <td colspan=3 class=xl128 style='border-right:1.0pt solid blue;border-left:
   none'>Window</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
-  <td colspan=3 height=50 class=xl130 style='border-right:.5pt solid black;
-  height:37.5pt;border-left:none'>checksum</td>
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
+  <td height=50 class=xl107 style='height:37.5pt;border-top:none'>&nbsp;</td>
   <td colspan=3 class=xl132 style='border-right:.5pt solid black;border-left:
+  none'>checksum</td>
+  <td colspan=3 class=xl130 style='border-right:1.0pt solid blue;border-left:
   none'>urgent Point</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
-  <td height=50 class=xl126 style='height:37.5pt'></td>
-  <td colspan=6 class=xl130 style='border-right:.5pt solid black'>TCP Options
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
+  <td height=50 class=xl124 style='height:37.5pt'></td>
+  <td colspan=6 class=xl128 style='border-right:1.0pt solid blue'>TCP Options
   (+Padding)</td>
  </tr>
- <tr height=50 style='mso-height-source:userset;height:37.5pt'>
+ <tr class=xl107 height=50 style='mso-height-source:userset;height:37.5pt'>
   <td height=50 style='height:37.5pt'></td>
-  <td colspan=6 class=xl130 style='border-right:.5pt solid black'>Data
+  <td colspan=6 class=xl128 style='border-right:1.0pt solid blue'>Data
   (variable)</td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
-  <td colspan=5 class=xl114>TCP Flags</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
+  <td colspan=5 class=xl110>TCP Flags</td>
   <td></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>C</td>
   <td>0x80</td>
   <td>Reduced (CWR)</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>E</td>
   <td>0x40</td>
   <td>ECN Echo (ECE)</td>
   <td colspan=2 style='mso-ignore:colspan'>Explicit Congestion Notification</td>
   <td></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>U</td>
   <td>0x20</td>
   <td>Urgent</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>A</td>
   <td>0x10</td>
   <td>Ack</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>P</td>
   <td>0x08</td>
   <td>Push</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>R</td>
   <td>0x04</td>
   <td>Reset</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>S</td>
   <td>0x02</td>
   <td>Syn</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'></td>
   <td>F</td>
   <td>0x01</td>
   <td>Fin</td>
   <td colspan=3 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 colspan=7 style='height:15.0pt;mso-ignore:colspan'></td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 colspan=7 style='height:15.75pt;mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td colspan=2 height=20 class=xl114 style='height:15.0pt'>TCP options</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td colspan=2 height=21 class=xl110 style='height:15.75pt'>TCP options</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 align=right style='height:15.0pt'>0</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 align=right style='height:15.75pt'>0</td>
   <td>End of Options List</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 align=right style='height:15.0pt'>1</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 align=right style='height:15.75pt'>1</td>
   <td>No Operation (NOP, Pad)</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 align=right style='height:15.0pt'>2</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 align=right style='height:15.75pt'>2</td>
   <td>Maximum Segment size</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 align=right style='height:15.0pt'>3</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 align=right style='height:15.75pt'>3</td>
   <td>Window Scale</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 align=right style='height:15.0pt'>4</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 align=right style='height:15.75pt'>4</td>
   <td>Selective ACK ok</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 align=right style='height:15.0pt'>8</td>
+ <tr class=xl107 height=21 style='height:15.75pt'>
+  <td height=21 align=right style='height:15.75pt'>8</td>
   <td>Timestamp</td>
   <td colspan=5 style='mso-ignore:colspan'></td>
  </tr>

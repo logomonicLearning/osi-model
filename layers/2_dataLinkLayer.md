@@ -74,12 +74,12 @@ Duties usually are logical addressing (network layer), physical addressing (data
 </tbody>
 </table>
 
-
+<embed src="https://www.youtube.com/embed/0b3h7CdJRpQ">
 
 <span style="display:none">it sets up links accross the physical  network ti encapsulates bits into data frames to be sent over a network and decapsulates incoming data. switches are the most common network devices that exist at the data link layer. it is also involved in error detection</span>
 
 
-
+---
 
 ## Logic Link Control (LLC) 802.2 (implemented in software)
 The LLC is the upper sublayer of the LLC which acts as an interface between the MAC sublayer and the network layer. <span style="display:none">LLC is very similar to several famous data link protocols, like Synchronous Data Link Control (SDLC) or High Level Data Link Control (HDLC) protocols. </span> The LLC includes the <span style="color:blue">service access points (SAP)</span> information in the frame to allow multiple applications to communicate simultaneously with other applications on the local machine or other stations on the network. 

@@ -52,6 +52,10 @@ See the table below for a summary of the network layers main functions
     </tr></tbody>
 </table>
 
+<embed src="https://www.youtube.com/embed/dNInnvmRivI">
+
+---
+
 see the table below for a list of some network layer protocols.
 
 <table>

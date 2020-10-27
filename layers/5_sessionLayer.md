@@ -45,6 +45,8 @@ It provides for full-duplex, half-duplex, or simplex operation, and establishes 
 <tr><td>Authenticaction and authorisation</td><td>it checks user credentials such as username and password</td></tr></tbody>
 </table>
 
+<embed src="https://www.youtube.com/embed/fWM-a3onIOk">
+
 ---
 
 <br>

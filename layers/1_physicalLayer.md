@@ -22,7 +22,7 @@ This is the physical and electrical layer of the model. It includes all the hard
 
 This layer does not have any associated protocols, but is crucial for creating a computer network.
 
-
+<embed src="https://www.youtube.com/embed/hRr20m10NLw">
 
 --- 
 
