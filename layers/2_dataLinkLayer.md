@@ -8,7 +8,7 @@ TABLE OF CONTENT:
 </div>
 
 ## KEY TERMS
-
+- NIC: network interface card is hardware that enables devices to communicate on a network. it has a MAC address which is burned into the device. 
 - Mac Address: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is either separated by a hyphen (-), colon (:) or dot (.). The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
 <table style="text-align:center">
 <thead>
@@ -28,18 +28,60 @@ TABLE OF CONTENT:
 </tbody>
 </table>
 
-- Frame: A frame is a DPU created on the Data Link layer and has source and destination MAC addresses,  FCS : Frame Check Sequence Stop frame : (Optional) when field length is not used 
-- NIC: network interface card.
-L2 Data Link Layer(DLL): It is considered to be the most complex layer in the OSI model. It consists of 2 sublayers which will be discussed separately in this article:
-- Logic Link Controller(LLC): the mediator between the network layer above and the MAC sublayer below. 
-- Media Access Controller( MAC) communicates with the physical layer below and the LLC sublayer above it;  
+
+- Frame: A frame is a DPU created on the Data Link layer and has source and destination MAC addresses, and the FCS (Frame Check Sequence)<span style="display:none">(Optional) when field length is not used </span> used for error detection
+- Logic Link Controller(LLC): Upper sublayer of the DLL which is the mediator between the network layer above and the MAC sublayer below. 
+- Media Access Controller(MAC): The Lower sub-layer of the DLL which  communicates with the physical layer below and the LLC (upper-sublayer)
 
 ---
 
-<span style="display:none">
-The data link layer is very similar to the network layer, except the data link layer facilitates data transfer between two devices on the SAME network. The data link layer takes packets from the network layer and breaks them into smaller pieces called frames. Like the network layer, the data link layer is also responsible for flow control and error control in intra-network communication (The transport layer only does flow control and error control for inter-network communications).<br/><br/>
-Duties usually are logical addressing (network layer), physical addressing (data link layer via MAC addresses of Network Interface Card, Switches), access media, controls how data is placed and received from the media (media access control, error detection). there are 2 types of protocols. Noiseless channels and noisy channel which is what stop and wait ARC and go-back-n ARQ.
-</span>
+
+The DLL encapsulates packets from L4 Network layer into frames which has the source and destination MAC address' of the sender and receiver. It also converts electrical impulses received from the physical layer into bits, and decasulates frames to be passed on to the upper layers. The DLL also performs a similar roles to the Network layer, including addressing of data between devices, error detection and flow control. However there are a few differences that must be brought to light. The main difference is that the DLL encapsulates data with the sender and receiver's MAC address in a frame, which is used by a switches for physical addressing to devices on the same network. Whereas  the Network layer encapsulates segments from the Transport layer which has the sender and reciever's IP address which is used by the router for logical addressing to devices on a different network. In simple terms, the network layer is not used unless data needs to be sent to a device on a different network. The DLL is considered to be the most complex layer in the OSI model and consists of 2 sublayers which will be discussed separately in this article:
+
+
+<table class="ui table">
+  <caption>DIFFERENCE BETWEEN DLL &amp NETWORK LAYERS</caption>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>DLL</th>
+      <th>Network</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LAYER</td>
+      <td>L3</td>
+      <td>L4</td>
+    </tr>
+    <tr>
+      <td>Area of operation</td>
+      <td>Same network</td>
+      <td>Separate Network</td>
+    </tr>
+    <tr>
+      <td>Device</td>
+      <td>Switch</td>
+      <td>Router</td>
+    </tr>
+    <tr>
+      <td>Addressing</td>
+      <td>Physical Addressing with MAC Address </td>
+      <td>Logical Addressing IP Address</td>
+    </tr>
+    <tr>
+      <td>Header</td>
+      <td>Frame</td>
+      <td>Packet</td>
+    </tr>
+    <tr>
+      <td>Flow Control & Error Control</td>
+      <td>Intra-network e.g. (CSMA/CD, CSMA/CA, Token Ring)</td>
+      <td>Inter-network (L5 Transport)</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <!-- no need for this table as each sublayer will be addressed accordingly.!!! -->
 
@@ -97,21 +139,22 @@ It provides the following services:
     <td>flow control is a speed matching mechanism that coordinates many frames a sender can transmit within a period (a window) before waiting for an acknowledgement from the receiver. This is important due to hardware limitations such as memory and bandwith. the sender before the limits are reached and request that the transmitter send fewer frames or stop temporarily. and without it will lead to data loss from the receiver. </td>
 </tr>
 <tr>
-    <td>error detection: </td>
+    <td>Error detection </td>
     <td>LLC uses the CRC field to detect errors When it provides a connection-oriented or an acknowledged connectionless service using the <a href="https://www.youtube.com/watch?v=LnbvhoxHn8M">Sliding window Automatic Repeat Request (ARQ)</a> Go Back N protocol. ARQ is a control protocols for transmission of data over noisy or unreliable communication network such as ethernet. They are named so because they provide for automatic retransmission of frames that are corrupted or lost during transmission. ARQ is also called Positive Acknowledgement with Retransmission (PAR).
 </td>
 </tr>
 <tr>
-    <td>multiplexing:</td>
+    <td>Multiplexing</td>
     <td> makes it possible for several network protocols (e.g. IP, IPX, Decnet, . EtherType, 802.1Q VLAN and Appletalk) to coexist within a multipoint network and to be transported over the same network medium.</td>
+</tr>
+<tr>
+    <td>Hardware control</td>
+    <td>controls the hardware responsible for interaction with the wired, optical or wireless transmission medium. 
+</td>
 </tr>
 </table>
 
 [:new](https://www.youtube.com/watch?v=_b4dXKB8Pt8)
-
-provides services to the upper layers
-
-controls the hardware responsible for interaction with the wired, optical or wireless transmission medium. 
 
 
 <span style="display:none">
@@ -120,10 +163,6 @@ controls the hardware responsible for interaction with the wired, optical or wir
 - it is involved in physical addressing using the MAC address. data units on this layer are called frames
 </span>
 
-
-
-
-
 ---
 
 ## Media Access Control (abstraction to hardware) MAC: 
@@ -131,7 +170,6 @@ controls the hardware responsible for interaction with the wired, optical or wir
 MAC is the lower sublayer of the DLL. It is responsible for the transmission of data packets to and from the  NIC, and to and from another remotely shared channel. It is also involved in flow control and multiplexing for the transmission medium. 
 
 MAC sublayer provides a control abstraction of the physical layer such that the complexities of physical link control are invisible to the LLC and upper layers of the network stack. Thus any LLC sublayer (and higher layers) may be used with any MAC. In turn, the medium access control block is formally connected to the PHY via a media-independent interface. 
-
 
 
 <table>
@@ -155,9 +193,7 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
             </td>
         </tr>
         <tr>
-            <td>
-                halfduplex retransmission and backoff functions
-            </td>
+            <td> halfduplex retransmission and backoff functions </td>
             <td></td>
         </tr>
         <tr>
@@ -190,12 +226,10 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
 </table>
 
 
-
-
 ---
 
 ## parts of a header
-<table>
+<table style="display:none">
 <tr><td>Start Frame Delimiter (SFD) </td><td>is the 8-bit (1-byte) value marking the end of the preamble of an Ethernet frame. The SFD is immediately followed by the destination MAC address. It has the value 10101011.</td>
 </tr>
 <tr><td>preamble</td> <td>of an Ethernet frame consists of a 56-bit (7-byte) pattern of alternating 1 and 0 bits, which allows devices on the network to easily detect a new incoming frame. The SFD is designed to break this pattern, and signal the start of the actual frame.</td>
@@ -216,9 +250,10 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
 
 ![ethernetFrame](..\images\EthernetFrameFormat.png)
 
+
 parts:
 
-<table border="0" cellpadding="0" cellspacing="0" width="1157" style="border-collapse:
+<table style="display:none" border="0" cellpadding="0" cellspacing="0" width="1157" style="border-collapse:
  collapse;table-layout:fixed;width:869pt">
  <colgroup><col class="xl65" width="108" style="mso-width-source:userset;mso-width-alt:3949;
  width:81pt">
@@ -420,6 +455,8 @@ parts:
 ---
 
 ## Datalink protocols
+
+there are 2 types of protocols. Noiseless channels and noisy channel which is what stop and wait ARC and go-back-n ARQ.
 
 ![Ethernet Field Protocols](..\images\EthernetFieldProtocolNumbers.png)
 - ARP
