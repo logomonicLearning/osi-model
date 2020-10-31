@@ -8,12 +8,12 @@ TABLE OF CONTENT:
 </div>
 
 ## KEY TERMS
-- NIC: network interface card is hardware that enables devices to communicate on a network. it has a MAC address which is burned into the device. 
-- Mac Address: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is either separated by a hyphen (-), colon (:) or dot (.). The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
+- <em>Network Interface Card (NIC)</em>: network interface card is hardware that enables devices to communicate on a network. it has a MAC address which is burned into the device. 
+- <em>Mac Address</em>: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is usually separated by any of the following: hyphen (-); colon (:);  dot (.); The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
+
 <table style="text-align:center">
 <thead>
-       <tr ><th colspan="2">MAC Address</th>
-    </tr>
+       <tr ><th colspan="2">MAC Address</th></tr>
 </thead>
 <tbody>
  <tr >
@@ -35,6 +35,7 @@ TABLE OF CONTENT:
 
 ---
 
+## Introduction to the datalink layer
 
 The DLL encapsulates packets from L4 Network layer into frames which has the source and destination MAC address' of the sender and receiver. It also converts electrical impulses received from the physical layer into bits, and decasulates frames to be passed on to the upper layers. The DLL also performs a similar roles to the Network layer, including addressing of data between devices, error detection and flow control. However there are a few differences that must be brought to light. The main difference is that the DLL encapsulates data with the sender and receiver's MAC address in a frame, which is used by a switches for physical addressing to devices on the same network. Whereas  the Network layer encapsulates segments from the Transport layer which has the sender and reciever's IP address which is used by the router for logical addressing to devices on a different network. In simple terms, the network layer is not used unless data needs to be sent to a device on a different network. The DLL is considered to be the most complex layer in the OSI model and consists of 2 sublayers which will be discussed separately in this article:
 
@@ -228,7 +229,7 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
 
 ---
 
-## parts of a header
+## parts of a Frame header
 <table style="display:none">
 <tr><td>Start Frame Delimiter (SFD) </td><td>is the 8-bit (1-byte) value marking the end of the preamble of an Ethernet frame. The SFD is immediately followed by the destination MAC address. It has the value 10101011.</td>
 </tr>

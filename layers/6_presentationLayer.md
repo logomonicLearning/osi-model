@@ -9,10 +9,21 @@ TABLE OF CONTENT:
 
 ## KEY TERMS
 
-
+encryption
+compression
+translation
+Character Encoding
+Data formatting:
+Compression:
 ---
 
+## introduction to L6 Presentation layer
+
 The presentation layer is responsible for formatting and delivering data to the application layer for further processing or display. in other words, layer 6 makes the data presentable for applications to consume. In many widely used applications and protocols, no distinction is made between the presentation and application layers. For example, HyperText Transfer Protocol (HTTP), generally regarded as an application-layer protocol, has presentation-layer aspects such as the ability to identify character encoding for proper conversion, which is then done in the application layer.
+
+<!-- https://www.youtube.com/watch?v=AtITX-U2mL4 -->
+<!-- <embed src="https://www.youtube.com/embed/RGVrn4Z02qY"> -->
+<embed src="https://www.youtube.com/embed/AtITX-U2mL4">
 
 The table below summarises the purpose of this layer
 
@@ -22,12 +33,12 @@ The table below summarises the purpose of this layer
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td>Convert</td>
+		<td>Convertion</td>
 		<td>It converts data recieved as bits (0s and 1s)  from the lower layers and converts it into its associated file format. For example, textual data may be converted to ASCII, images to png and audio to mp3.  It also converting media into binary so that it can be converted into electrical signals over the physical layer (Layer 1).
 		</td>
 	</tr>
 	<tr>
-		<td>Translate</td>
+		<td>Translation</td>
 		<td>Different machines may use different encoding schemes, so the applicaiton layer may need to translate data into a format that the Application Layer can consume. 
 		<ul>
 			<li>UTF8 -> ASCII </li>
@@ -59,8 +70,6 @@ The table below summarises the purpose of this layer
 </td>
 	</tr>
 </table>
-
-<embed src="https://www.youtube.com/embed/RGVrn4Z02qY">
 
 ---
 

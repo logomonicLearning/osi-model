@@ -16,6 +16,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
 tr
 	{opacity:0.5;
 	cursor:pointer;}
+td:hover
+	{opacity:0.5;
+	cursor:pointer;}
+tr
+	{opacity:0.5;
+	cursor:pointer;}
 table
 	{mso-displayed-decimal-separator:"\.";
 	mso-displayed-thousand-separator:"\,";}
@@ -75,7 +81,7 @@ else
   <td class=xl70 width=413 style='width:310pt'>Description</td>
  </tr>
  <tr class=xl67 height=81 style='height:60.75pt'>
-  <td colspan=3 height=81 class=xl90 width=250 style='border-right:.5pt solid black;
+  <td colspan=3 height=81 class=xl93 width=250 style='border-right:.5pt solid black;
   height:60.75pt;width:188pt'>Preamble (MAC)</td>
   <td class=xl71 width=302 style='width:227pt'>PLCP</td>
   <td class=xl72 width=79 style='width:59pt'>7</td>
@@ -86,127 +92,118 @@ else
   bit-level synchronization.<span style='mso-spacerun:yes'> </span></td>
  </tr>
  <tr class=xl67 height=41 style='height:30.75pt'>
-  <td height=41 class=xl67 width=108 style='height:30.75pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-top:none;border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl67 width=86 style='border-top:none;border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl74 width=302 style='width:227pt'>Start Frame Delimiter (SFD)</td>
-  <td class=xl75 width=79 style='width:59pt'>1</td>
-  <td class=xl75 width=113 style='width:85pt'>10101011</td>
-  <td class=xl76 width=413 style='width:310pt'>Provides byte-level
+  <td height=41 class=xl74 width=108 style='height:30.75pt;width:81pt'>&nbsp;</td>
+  <td class=xl75 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl75 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl76 width=302 style='width:227pt'>Start Frame Delimiter (SFD)</td>
+  <td class=xl77 width=79 style='width:59pt'>1</td>
+  <td class=xl77 width=113 style='width:85pt'>10101011</td>
+  <td class=xl78 width=413 style='width:310pt'>Provides byte-level
   synchronization and to mark a new incoming frame.<span
   style='mso-spacerun:yes'> </span></td>
  </tr>
  <tr class=xl67 height=52 style='mso-height-source:userset;height:39.0pt'>
-  <td height=52 class=xl77 width=108 style='height:39.0pt;width:81pt'>Ethernet
+  <td height=52 class=xl79 width=108 style='height:39.0pt;width:81pt'>Ethernet
   Frame, 64-1518 Bytes</td>
-  <td class=xl77 width=56 style='border-left:none;width:42pt'>Header<br>
+  <td class=xl80 width=56 style='width:42pt'>Header<br>
     LLC</td>
-  <td class=xl77 width=86 style='border-left:none;width:65pt'>Mac Addresses</td>
-  <td class=xl78 width=302 style='width:227pt'>Destintion (DA)</td>
-  <td class=xl75 width=79 style='width:59pt'>6</td>
-  <td class=xl75 width=113 style='width:85pt'>01:80:C2:00:00:01</td>
-  <td class=xl76 width=413 style='width:310pt'>Globally assigned multicast
+  <td class=xl80 width=86 style='width:65pt'>Mac Addresses</td>
+  <td class=xl81 width=302 style='width:227pt'>Destintion (DA)</td>
+  <td class=xl77 width=79 style='width:59pt'>6</td>
+  <td class=xl77 width=113 style='width:85pt'>01:80:C2:00:00:01</td>
+  <td class=xl78 width=413 style='width:310pt'>Globally assigned multicast
   destination address</td>
  </tr>
  <tr class=xl67 height=65 style='mso-height-source:userset;height:48.75pt'>
   <td height=65 class=xl67 width=108 style='height:48.75pt;width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl67 width=86 style='border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl79 width=302 style='width:227pt'>Source (SA)</td>
-  <td class=xl75 width=79 style='width:59pt'>6</td>
-  <td class=xl75 width=113 style='width:85pt'>00:00:00:00:00</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td class=xl82 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl82 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl83 width=302 style='width:227pt'>Source (SA)</td>
+  <td class=xl77 width=79 style='width:59pt'>6</td>
+  <td class=xl77 width=113 style='width:85pt'>00:00:00:00:00</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=84 style='mso-height-source:userset;height:63.0pt'>
-  <td height=84 class=xl67 width=108 style='height:63.0pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-top:none;border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl77 width=86 style='width:65pt'>802.1Q VLAN Tag (optional)<br>
+  <td height=84 class=xl74 width=108 style='height:63.0pt;width:81pt'>&nbsp;</td>
+  <td class=xl75 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl79 width=86 style='width:65pt'>802.1Q VLAN Tag (optional)<br>
     </td>
-  <td class=xl81 width=302 style='width:227pt'>Protocol ID</td>
-  <td class=xl75 width=79 style='width:59pt'>2</td>
-  <td class=xl76 width=113 style='width:85pt'>&nbsp;</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td class=xl85 width=302 style='width:227pt'>Protocol ID</td>
+  <td class=xl77 width=79 style='width:59pt'>2</td>
+  <td class=xl78 width=113 style='width:85pt'>&nbsp;</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=32 style='mso-height-source:userset;height:24.0pt'>
-  <td height=32 class=xl67 width=108 style='height:24.0pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-top:none;border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl67 width=86 style='border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl81 width=302 style='width:227pt'>User Priority</td>
-  <td class=xl77 width=79 style='border-left:none;width:59pt'>2</td>
-  <td class=xl76 width=113 style='width:85pt'>&nbsp;</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td height=32 class=xl74 width=108 style='height:24.0pt;width:81pt'>&nbsp;</td>
+  <td class=xl75 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl82 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl85 width=302 style='width:227pt'>User Priority</td>
+  <td class=xl80 width=79 style='width:59pt'>2</td>
+  <td class=xl78 width=113 style='width:85pt'>&nbsp;</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=25 style='mso-height-source:userset;height:18.75pt'>
-  <td height=25 class=xl67 width=108 style='height:18.75pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-top:none;border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl67 width=86 style='border-top:none;border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl82 width=302 style='width:227pt'>Canonical Format Indicator</td>
+  <td height=25 class=xl74 width=108 style='height:18.75pt;width:81pt'>&nbsp;</td>
+  <td class=xl75 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl75 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl86 width=302 style='width:227pt'>Canonical Format Indicator</td>
   <td class=xl67 width=79 style='width:59pt'>&nbsp;</td>
-  <td class=xl75 width=113 style='width:85pt'>&nbsp;</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td class=xl77 width=113 style='width:85pt'>&nbsp;</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=29 style='mso-height-source:userset;height:21.75pt'>
-  <td height=29 class=xl67 width=108 style='height:21.75pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-top:none;border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl67 width=86 style='border-top:none;border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl82 width=302 style='width:227pt'>VLAN ID</td>
-  <td class=xl67 width=79 style='border-top:none;width:59pt'>&nbsp;</td>
-  <td class=xl75 width=113 style='width:85pt'>&nbsp;</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td height=29 class=xl74 width=108 style='height:21.75pt;width:81pt'>&nbsp;</td>
+  <td class=xl75 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl75 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl86 width=302 style='width:227pt'>VLAN ID</td>
+  <td class=xl74 width=79 style='width:59pt'>&nbsp;</td>
+  <td class=xl77 width=113 style='width:85pt'>&nbsp;</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=163 style='mso-height-source:userset;height:122.25pt'>
-  <td height=163 class=xl67 width=108 style='height:122.25pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-top:none;border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl83 width=86 style='width:65pt'>802.3 Ethertype (Length)</td>
-  <td class=xl84 width=302 style='width:227pt'>ARP;<br>
+  <td height=163 class=xl74 width=108 style='height:122.25pt;width:81pt'>&nbsp;</td>
+  <td class=xl75 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl80 width=86 style='width:65pt'>802.3 Ethertype (Length)</td>
+  <td class=xl87 width=302 style='width:227pt'>ARP;<br>
     Ethernet II (DIX) w IPv4/6;<br>
     Novell raw IEEE 802.3 non-standard variation;<br>
     IEEE 802.2 Logic Link Control (LLC);<br>
     IEEE 802.2 Subnetwork Access Protocol (SNAP) frame;</td>
-  <td class=xl75 width=79 style='width:59pt'>2</td>
-  <td class=xl75 width=113 style='width:85pt'>0x8808</td>
-  <td class=xl76 width=413 style='width:310pt'>0x0800: 1pv4<br>
+  <td class=xl77 width=79 style='width:59pt'>2</td>
+  <td class=xl77 width=113 style='width:85pt'>0x8808</td>
+  <td class=xl78 width=413 style='width:310pt'>0x0800: 1pv4<br>
     0x86DD: ipv6<br>
     0x0806: ARP<br>
     </td>
  </tr>
  <tr class=xl67 height=71 style='mso-height-source:userset;height:53.25pt'>
-  <td height=71 class=xl67 width=108 style='height:53.25pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl77 width=56 style='width:42pt'>Payload</td>
-  <td class=xl85 width=86 style='border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl86 width=302 style='width:227pt'>Data</td>
-  <td class=xl75 width=79 style='width:59pt'>46-1500</td>
-  <td class=xl75 width=113 style='width:85pt'>varies</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td height=71 class=xl74 width=108 style='height:53.25pt;width:81pt'>&nbsp;</td>
+  <td class=xl79 width=56 style='width:42pt'>Payload</td>
+  <td class=xl88 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl89 width=302 style='width:227pt'>Data</td>
+  <td class=xl77 width=79 style='width:59pt'>46-1500</td>
+  <td class=xl77 width=113 style='width:85pt'>varies</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=43 style='mso-height-source:userset;height:32.25pt'>
-  <td height=43 class=xl67 width=108 style='height:32.25pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl67 width=86 style='border-left:none;width:65pt'>&nbsp;</td>
-  <td class=xl87 width=302 style='width:227pt'>Padding</td>
-  <td class=xl75 width=79 style='width:59pt'>42</td>
-  <td class=xl75 width=113 style='width:85pt'>0x00</td>
-  <td class=xl76 width=413 style='width:310pt'>&nbsp;</td>
+  <td height=43 class=xl74 width=108 style='height:32.25pt;width:81pt'>&nbsp;</td>
+  <td class=xl82 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl82 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl90 width=302 style='width:227pt'>Padding</td>
+  <td class=xl77 width=79 style='width:59pt'>42</td>
+  <td class=xl77 width=113 style='width:85pt'>0x00</td>
+  <td class=xl78 width=413 style='width:310pt'>&nbsp;</td>
  </tr>
  <tr class=xl67 height=301 style='height:225.75pt'>
-  <td height=301 class=xl67 width=108 style='height:225.75pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl77 width=56 style='width:42pt'>Trailer MAC</td>
-  <td class=xl76 width=86 style='width:65pt'>&nbsp;</td>
-  <td class=xl88 width=302 style='width:227pt'>Frame Check Sequence (CRC)
+  <td height=301 class=xl74 width=108 style='height:225.75pt;width:81pt'>&nbsp;</td>
+  <td class=xl79 width=56 style='width:42pt'>Trailer MAC</td>
+  <td class=xl78 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl91 width=302 style='width:227pt'>Frame Check Sequence (CRC)
   <br>
     MAC</td>
-  <td class=xl75 width=79 style='width:59pt'>4</td>
-  <td class=xl75 width=113 style='width:85pt'>varies</td>
-  <td class=xl76 width=413 style='width:310pt'><span
+  <td class=xl77 width=79 style='width:59pt'>4</td>
+  <td class=xl77 width=113 style='width:85pt'>varies</td>
+  <td class=xl78 width=413 style='width:310pt'><span
   style='mso-spacerun:yes'> </span>allows detection of corrupted data within
   the entire frame as received on the receiver side. The standard states that
   the FCS value is computed as a function of the protected MAC frame fields:
@@ -223,14 +220,13 @@ else
   style='mso-spacerun:yes'> </span></td>
  </tr>
  <tr class=xl67 height=45 style='mso-height-source:userset;height:33.75pt'>
-  <td height=45 class=xl67 width=108 style='height:33.75pt;border-top:none;
-  width:81pt'>&nbsp;</td>
-  <td class=xl67 width=56 style='border-left:none;width:42pt'>&nbsp;</td>
-  <td class=xl76 width=86 style='width:65pt'>&nbsp;</td>
-  <td class=xl89 width=302 style='width:227pt'>Inter-frame gap</td>
-  <td class=xl75 width=79 style='width:59pt'>12</td>
-  <td class=xl76 width=113 style='width:85pt'>97 Nanoseconds</td>
-  <td class=xl76 width=413 style='width:310pt'><span
+  <td height=45 class=xl74 width=108 style='height:33.75pt;width:81pt'>&nbsp;</td>
+  <td class=xl82 width=56 style='width:42pt'>&nbsp;</td>
+  <td class=xl78 width=86 style='width:65pt'>&nbsp;</td>
+  <td class=xl92 width=302 style='width:227pt'>Inter-frame gap</td>
+  <td class=xl77 width=79 style='width:59pt'>12</td>
+  <td class=xl78 width=113 style='width:85pt'>97 Nanoseconds</td>
+  <td class=xl78 width=413 style='width:310pt'><span
   style='mso-spacerun:yes'> </span>idle time between packets. After a packet
   has been sent, transmitters are required to transmit a minimum of 96 bits (12
   octets) of idle line state before transmitting the next packet.<span
