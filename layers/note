@@ -1,0 +1,14 @@
+There exists an Internet standard for encapsulating IPv4 traffic in IEEE 802.2 LLC SAP/SNAP frames.
+[12] It is almost never implemented on Ethernet, although it is used on
+- FDDI,
+- Token Ring,
+- IEEE 802.11 (with the exception of the 5.9 GHz band, where it uses EtherType)[13] and
+- other IEEE 802 LANs.
+
+
+IEEE 802.2 LLC SAP/SNAP frames  to transmit the following over ethernet:
+- token ring
+- IEEE 802.11
+- other IEEE 802 LANs such as:
+- IPv6  (almost never used.)
+- IPv4 (almost never used.)

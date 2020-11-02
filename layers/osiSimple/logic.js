@@ -79,7 +79,7 @@ layers.forEach((el,idx)=>{
     center([description])
     description.textContent=el.description
     right.appendChild(description)
-  })
+})
 
 
 osi.appendChild(left);
@@ -111,8 +111,6 @@ const $descriptions=[...document.querySelectorAll('.layer__description')];
 
   $layers.forEach(el=>{
     el.onmouseenter=(e)=>{
-      console.log(e.target.dataset.idx);
-//       el.children[2].classList.add('stretch');
       let idx=e.target.dataset.idx;
       $descriptions.forEach(el=>{
         el.classList.remove('show');

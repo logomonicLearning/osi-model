@@ -10,7 +10,8 @@ TABLE OF CONTENT:
 
 ## KEY TERMS
 
-- Routing
+- Router: a device used to transport data between different networks using the IP Address.
+- Packet: this is the DPU of the network layer
 - Local forwarding table: examnes the header to determine the destination, lookup and send the packets on the appropriate outgoing link. the forwarding gets created by a routing algorithm
 - routing algorithm: knows the global decisions and create the local decisions to support the global goals. it is used to create the forwarding table.
 - ip address
@@ -26,6 +27,9 @@ The network layer is responsible for facilitating data transfer between two diff
 
 <span style="display:none">handles Routing of data. after data has arrived, each frame is examined to see if the data has reached its ultimate target. it recieves outgoing and incomming transmissions and ensures that it reaches the right target. for IP addressses this is achieved through ARP. Internet Protocol (IP) address is the adddress of your computer over a network. 
 </span>
+
+
+<embed src="https://www.youtube.com/embed/dNInnvmRivI">
 
 See the table below for a summary of the network layers main functions 
 
@@ -51,8 +55,6 @@ See the table below for a summary of the network layers main functions
         <td>to whom send packets</td>
     </tr></tbody>
 </table>
-
-<embed src="https://www.youtube.com/embed/dNInnvmRivI">
 
 ---
 
@@ -105,6 +107,7 @@ see the table below for a list of some network layer protocols.
 
 In this tutorial for beginners I discuss the structure of the IPv6 address, the network portion, the interface ID, and the network prefix. The function of the different types of IPv6 addresses: global unicast, link-local, unique local, and anycast. How SLAAC works in IPv6 address auto-configuration along with EUI-64 to auto-configure the interface-id. The role of ICMPv6 in router and neighbor solicitation and advertisement (RS, RA, NS, NA). I also go over IPv6 addresses that are important to know like IPv6 all routes default gateway, loopback, and multicast addresses like the all solicited nodes multicast address
 
+
 e.g. 192.168.1.9
 
 127.0.0.1 is known as a loopback address.
@@ -119,7 +122,7 @@ e.g. 192.168.1.9
 ---
 
 
-### Quick excercise:
+## Quick excercise:
 do the following to see all the current computers on your Local Area Network (LAN):
 
 

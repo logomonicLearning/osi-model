@@ -16,14 +16,14 @@ TABLE OF CONTENT:
 
 
 
-- <em>Bit stream</em>:The DPU of the physical layer is bits transmitted as electrical impulses through a medium such as copper wire.
-- Computer Network: Local Area network, Wide Area network, Personal Area Network
-- Network Topology: Describe how networks are configured. Networks can be configured in various ways such as: Star; ring; bus; mesh.
-- Network Architecture: Describes the relationship between hosts on a network. They can either be peer-to-peer or client-server 
-- Network Access Point (NAP): a device used by a host machine to access the network
-- fault tolerance: a networks capacity to remain functional as a result of faults in the network. some topologies such as mesh are more fault tolerant than others such as bus.
-- links transmission capacity: the speed at which data can be transmitted over a network, usually measured in bits/second.
-- Switching: Describes how network devices deliver data over a network. Circuit Switching is stable, whereas Packet Switching is more flexible
+- <b>Bit stream</b>:The PDU of the physical layer is bits transmitted as electrical impulses through a medium such as copper wire.
+- <b>Computer Network</b>: Local Area network, Wide Area network, Personal Area Network
+- <b>Network Topology</b>: Describe how networks are configured. Networks can be configured in various ways such as: Star; ring; bus; mesh.
+- <b>Network Architecture</b>: Describes the relationship between hosts on a network. They can either be peer-to-peer or client-server 
+- <b>Network Access Point (NAP)</b>: a device used by a host machine to access the network
+- <b>fault tolerance</b>: a networks capacity to remain functional as a result of faults in the network. some topologies such as mesh are more fault tolerant than others such as bus.
+- <b>links transmission capacity</b>: the speed at which data can be transmitted over a network, usually measured in bits/second.
+- <b>Switching</b>: Describes how network devices deliver data over a network. Circuit Switching is stable, whereas Packet Switching is more flexible
 
 
 ---
@@ -35,9 +35,14 @@ The physical includes all the hardware and physical as well as wireless devices 
 
 <embed src="https://www.youtube.com/embed/hRr20m10NLw">
 
+---
+
+<h2>Components of a Network</h2>
+
+<embed src="https://www.youtube.com/embed/Itwk3BJ4GPY"></embed>
 
 <table>
-	<caption><h3>Components of a Network</h3></caption>
+	<caption></caption>
 	<thead>
 		<tr>
 			<th>Component</th>
