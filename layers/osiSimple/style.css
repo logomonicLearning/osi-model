@@ -12,8 +12,8 @@
 } */
 
 .osi{
-  grid-template-columns: 150px 300px;
-/*   grid-column-gap: 5px; */
+  grid-template-columns: 100px 200px 100px 300px;
+  /*   grid-column-gap: 5px; */
   margin-bottom: 20px;
   box-shadow: 2px 2px 2px 2px grey;
   height:500px;
@@ -41,6 +41,10 @@
 }
 
 
+.flex--column{
+  flex-direction:column;
+}
+
 .layer__description{
   display:none;
   width:inherit;
@@ -49,9 +53,14 @@
   transition:width 0.5s ease;
 }
 
+
+
 .layer__name, .layer__number{
   /* border: 0.5px solid green; */
+  cursor: pointer;
+  opacity:0.8;
 }
+
 
 .stretch{
   width:100%;
@@ -79,4 +88,8 @@ embed{
   display: flex;
   align-items: flex-start;
   text-align: left;
+}
+
+.highlight{
+  opacity:1;
 }

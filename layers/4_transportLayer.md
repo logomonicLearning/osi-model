@@ -9,11 +9,13 @@ TABLE OF CONTENT:
 
 ## KEY TERMS
 
-- segment
+- segment: the PDU of the transport layer
 - checksum
 - transmission
 - windowing
-- socket	: interface for Transport layer protocols
+- socket : interface for Transport layer protocols
+- PKI
+- Port number
 
 ---
 
@@ -23,7 +25,11 @@ TABLE OF CONTENT:
 	The transport layer is also responsible for flow control and error control,. Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn’t overwhelm a receiver with a slow connection. The transport layer performs error control on the receiving end by ensuring that the data received is complete , and checks checksums of data units and make use of automatic repeat request if it isn’t.
 </span>
 
-the transport layer is at the center of the protocols between the upper layers and thelower layers. As the name suggests, it is responsible for transporting  data over a network by segmenting data into managable segments. the most common being TCP and UDP.  other protocols may provide additional capabilities. error recovery, data flow and retransmission.
+## Introduction to L4 Transport layer
+
+The transport layer is at the center of the OSI model as it lies between the upper layers (L7-L5) and the lower  layers (L3-L1). As the name suggests, it is responsible for transporting  data over a network by dividing  data received from the upper layers into managable segments, before passing them on to lower layers for further processing. The most common protocols in this layer are TCP and UDP. Other protocols may provide additional capabilities for error recovery, data flow, retransmission and encryption.
+
+<embed src="https://www.youtube.com/embed/DsQcX-7n6fY"></embed>
 
 
 See the table below for a list of its main functions:
@@ -53,22 +59,48 @@ See the table below for a list of its main functions:
 	<td>Connection and connectionless data transfer.</td>
 	<td>This layer is separated by two protocols like Transport Control Protocol and User Datagram Protocol. TCP is following connection-oriented transmission. It's slower but provides feedback (HTTP, FTP, etc). UDP is following connectionless transmission. It's faster but doesn't provide feedback and used when we don't care about the fullness of data (video games, music, movies, etc.).</td> 	
 </tr>
+<tr>
+	<td>Encryption</td>
+	<td>The transport layer has its own encryption protocol called TLS which provides end-to-end encryption. Meaning encryption is handled by the end devices as opposed to intermediary devices such as routers and switches.TLS is often used by L7 application layer protocols such as HTTPS and FTPS. </td>
+</tr>
 </tbody>
 </table>
 
-<embed src="https://www.youtube.com/embed/fNyd6Vo8Dps">
+functions
+
+- decides if data transmission should be parallel or single path.
+- multiplexing, splitting on data.
+- provides additional quality of service
+- receives data from session layer and splits it into small units called segments and passes it onto the network layer.
+- converting message to smaller units
+- responsible for end-to-end deliver of complete message
+- the heart of the osi Model.
+
+Services provided by Transport layer
+
+connection oriented services - establishing, maintaining connection for data transfer and terminating. (3 phases)
+connetionless service: one phase= data transfer, fast
+
+it is operated by the OS. 
+
+the transport session and application and presentation layer is operated on by the operating system.
+
 
 ---
 
-## TCP
+
+
+## TYPES OF CONNECTION (TCP vs UDP)
+
+(requires intro!!!)
+
+<embed src="https://www.youtube.com/embed/fNyd6Vo8Dps">
+
 [requires diagram]
 SYN
 ACK + SYN
 ACK
 
----
-
-## UDP
 
 
 See the table below for a detailed comparison between TCP and UDP
@@ -104,16 +136,34 @@ See the table below for a detailed comparison between TCP and UDP
 		</td>
 		</tr>
 		<tr>
-			<td>Purpose</td>
+			<td>Main Application</td>
 			<td>Connecting to Web pages, sending emails</td>
-			<td>Transmission of video and audio connection.
+			<td>Transmission of video and audio.
 		</td>
 		</tr>
 	</tbody>
 </table>
 
 ---
- 
+
+## Ports
+
+<embed src="https://www.youtube.com/embed/RDotMcs0Erg"></embed>
+
+
+---
+
+## SSL/TLS
+SSL and TLS SSL and TLS are both cryptographic protocols that provide authentication and data encryption between servers, machines and applications operating over a network (e.g. a client connecting to a web server).
+SSL is the predecessor to TLS
+TLS was introduced in 1999 as a new version of SSL and was based on SSL 3.0:
+Both SSL 2.0 and 3.0 have been deprecated by the IETF (in 2011 and 2015, respectively). Over the years vulnerabilities have been and continue to be discovered in the deprecated SSL protocols (e.g. POODLE, DROWN).
+It’s worth noting here that SSL and TLS simply refer to the handshake that takes place between a client and a server. The handshake doesn’t actually do any encryption itself, it just agrees on a shared secret and type of encryption that is going to be used.
+TLS consists of two parts: The TLS handshake layer manages which cipher (the type of encryption algorithm) will be used, the authentication (using a certificate specific to your domain name and organization), and the key exchange (based on the public-private key pair from the certificate). The handshake process is performed only once to establish a secure network connection for both parties. The TLS record layer gets data from the user applications, encrypts it, fragments it to an appropriate size (as determined by the cipher), and sends it to the network transport layer. TLS establishes an encrypted, bidirectional network tunnel for arbitrary data to travel between two hosts. TLS is most often used in conjunction with other Internet protocols such as HTTPS, SSH, FTPS, and secure email.
+SSL is a general method for protecting data transported over a network, whereas SSH is a network application for logging in and sharing data with a remote computer.
+
+---
+
 ## Excercise:
 
 to see the type of protocols established on your computer while connected to the internet type netstat on the command line.

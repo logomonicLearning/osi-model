@@ -185,7 +185,7 @@ Network Topology describes the layout of devices connected on a network. topolog
 
 ---
 
-## Networking Models 
+## Networking aRCHITECTURE 
 <span style="display:none">Network architecture is a framework for the specification of a network's physical components and their functional organization and configuration, its operational principles and procedures, as well as communication protocols used.The type of protocol used by an application depends on the type of application architecture being used. 
 </span>
 Network architecture describes the structure and classification of a distributed application. For example, the applications architecture of the public switched telephone network (PSTN) has been termed the Intelligent Network. There are any number of specific classifications but all lie on a continuum between the dumb network (e.g. Internet) and the intelligent network (e.g. the telephone network).

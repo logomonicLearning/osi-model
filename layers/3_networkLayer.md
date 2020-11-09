@@ -16,23 +16,16 @@ TABLE OF CONTENT:
 - <b>routing algorithm</b>: knows the global decisions and create the local decisions to support the global goals. it is used to create the forwarding table.
 - <b>ip address</b> : A numerical address used by devices to know where to send data. it includes the address of the device and the network it belongs to. it comes in two different flavours. IPv4 and IPv6. (see IP section for more details)
 - <b>subnet mask</b> :
-- unicast
-- multicast
+    - unicast
+    - multicast
+- <b>Tunneling</b>: In computer networks, a tunneling protocol is a communications protocol that allows for the movement of data from one network to another. It involves allowing private network communications to be sent across a public network (such as the Internet) through a process called encapsulation. the best known are L2TP and PPTP(outmoded and weak).
 
 ---
 
 ## introduction to the network layer
 
-The network layer facilitates data transfer between two different networks throught a router. This layer is not needed however if the target machine is on the same local area network. The network layer encapsulates segments from the the transport layer into packets with the sender and receivers IP addressess. It also reassembling these packets on the receiving device. the network layer is point-to-point, meaning there are intermediary devices. i.e. routers. This is in contrast to the Transport layer which is an end-to-end. this basically means??? data is encapsulated with the sender and recievers ip addressed to be sent over WAN and decapsulated them to be sent to upper layers.
+The network layer facilitates data transfer between two separate networks throught a router using the sender and receiver's logical IP address. For devices on the same network however, this task is performed by the L2 switch using the sender and receiver's MAC address, and so the transport layer is not required. The network layer encapsulates segments from  the transport layer into packets with the sender and receivers IP addressess, and then reassembling these packets on the receiving device. Unlike the host-to-host communication of the upper layers(L7-L5), this layer uses <span style="color:green">point-to-point</span> principle and so much of the logic and error handling of routing is performed by intermediary devices such as routers and Layer 3 switches. 
 
-
-- End to end indicates a communication happening between two applications (maybe you and your friend using Skype). It doesn't care what's in the middle, it just consider that the two ends are taking with one another. It generally is a Layer 4 (or higher) communication
-- Point to point is a Layer 2 link with two devices only on it. That is, two devices with an IP address have a cable going straight from a device into the other. A protocol used there is PPP, and HDLC is a legacy one.
-- Hop by Hop indicates the flow the communication follows. Data pass through multiple devices with an IP address, and each is genetically named “hop”. Hop by Hop indicates analyzing the data flow at layer 3, checking all devices in the path
-
-[E2E Principle](https://www.youtube.com/watch?v=3Iy4EQpGnpo)
-e.g. if 2 devices wish to share info, much functioality as possible should be pushed to the edges rather than the internet (which is expensive). if a packet is missing the IP doesnt handle it, TCP will handle it and repair it. edge b will tell a that it didnt receive the apcket. it keeps the core internet simple
-TCP (reliable) runs on the local machine, whereas IP (unreliable) runs in the core of the internet
 
 <span style="display:none">handles Routing of data. after data has arrived, each frame is examined to see if the data has reached its ultimate target. it recieves outgoing and incomming transmissions and ensures that it reaches the right target. for IP addressses this is achieved through ARP. Internet Protocol (IP) address is the adddress of your computer over a network. 
 </span>
@@ -51,25 +44,27 @@ See the table below for a summary of the network layers main functions
 </thead>      
 <tbody><tr>
     <td>Logical Addressing</td> 
-    <td>IPv4, IPv6, mask, IP, using IP addresses to reach the right computer. </td>
-    <td>Forwarding</td> 
-    <td>(local process)</td>
+    <td>This layer uses IP addresses i.e.  IPv4, IPv6 to uniquely identify all devices on a network so that data reaches the right destination.  </td>
 </tr>
+    <tr>
+        <td>Forwarding</td> 
+        <td>(local process)</td>
+    </tr>
     <tr>
         <td>Routing</td> 
         <td> (Global hops across multiple routing)finding the best path to the destination as there are multiple paths to take.  Path determination (Open Shortest Path First, Border Gateway Protocol, intermediate system-intermediate system). determines best path to reach destination</td>
     </tr>
     <tr>
         <td>Error Handling</td>
-        <td>ICMP is used to send Error messages and is utilised by ping and traceroute</td>
+        <td>This layer uses ICMP  to send Error messages if a node on the network cannot be reached. ICMP is  utilised by command line tools such as ping and traceroute</td>
     </tr>    
     <tr>
         <td>Fragmentation and reassembly</td>
         <td> if the data is too large, it is fragmented and reassembled at arrival. maximum payload for ethernet is 1500Bytes</td>
     </tr>
     <tr>
-        <td>Encapsulation</td>
-        <td>to whom send packets</td>
+        <td>Packaging</td>
+        <td>It encapsulates data from higher layers with the sender and receiver's IP address</td>
     </tr>
     
 </tbody>
@@ -86,23 +81,13 @@ See the table below for a summary of the network layers main functions
 <span style="display:none">In this tutorial for beginners I discuss the structure of the IPv6 address, the network portion, the interface ID, and the network prefix. The function of the different types of IPv6 addresses: global unicast, link-local, unique local, and anycast. How SLAAC works in IPv6 address auto-configuration along with EUI-64 to auto-configure the interface-id. The role of ICMPv6 in router and neighbor solicitation and advertisement (RS, RA, NS, NA). I also go over IPv6 addresses that are important to know like IPv6 all routes default gateway, loopback, and multicast addresses like the all solicited nodes multicast address
 </span>
 
+An IP address is the logical address assigned to each device on a network. This is usually assigned by a router using DHCP but can be assigned manually to remain static which is imortant for shared device such as printers and servers. With DHCP, the router leases the address to the device when it is connected and the address becomes available when the machine disconnects from the network. There are 2 types of IP addresses: IPv4 a 32 bit address with each byte separated by a dot; IPv6 is the newer version of IP addresses is a 128 bit address written in hexadecimal notation. This article will elaborate more on IPv4 as it is the predominant of the two.
+
+
+<embed src="https://www.youtube.com/embed/7_-qWlvQQtY"></embed>
+
 [vid](https://www.youtube.com/watch?v=v8aYhOxZuNg)
-IP addresses are 2 addresses in 1. the ip address is the ip of the device and the network it is in. 
-
-e.g. 
-
-172.16.0.1
-
-172.16 is the network
-
-0.1 are the device
-
-all devices in the network will begin  with 172.168 
-
-if devices on another network e.g. 184.2 they will need a router to communicate.
-
-is it always the 1st half? no
-
+An IPv4 addresses identifys 2 things: the address of a host (H) on a network, and the address of the network (N) it belongs to. The part of the IP address which indicate the network depends on the class of IP address it belongs to which is identified by the subnet mask. see the table below for more details:
 
 <table border="0" cellpadding="0" cellspacing="0" width="817" style="border-collapse:
  collapse;table-layout:fixed;width:614pt">
@@ -216,18 +201,11 @@ is it always the 1st half? no
 </tbody></table>
 
 Note: Class A addresses 127.0.0.0 to 126.255.255.255 are reserved for loopback testing on the local machine
-
+Class C addresses are the most familiar as they are used on the local network, ad usually begin with 192.168.xxx.xxx
 
 <span style="color:red">1</span>.<span style="color:green">2.3.4</span>
 
-
-<embed src="https://www.youtube.com/embed/7_-qWlvQQtY"></embed>
-
-e.g. 192.168.1.9
-
-127.0.0.1 is known as a loopback address.
-
-![ipv6 parts](..\images\partsOfipv6.png)
+<!-- ![ipv6 parts](..\images\partsOfipv6.png) -->
 
 ---
 
@@ -256,8 +234,8 @@ see the table below for a list of some network layer protocols.
         </tr>   
         <tr>    
             <td>ATM</td>
-            <td></td>
-            <td></td>
+            <td>Asynchronous Transfer Mode</td>
+            <td> A telecommunications standard for digital transmission of multiple types of traffic, including telephony (voice), data, and video signals in one network without the use of separate overlay networks.</td>
         </tr>   
         <tr>    
             <td>Internet Control message protocol</td>
@@ -269,11 +247,13 @@ see the table below for a list of some network layer protocols.
             <td>IGMP</td>
             <td>IGMP is used by hosts and adjacent routers on IPv4 networks to establish multicast group memberships... That is IGMP will be within the local multicast router and the end host client... then to cross the L3 boundary (eg. a router) protocol like Protocol Independent Multicast (PIM) is then used between the local and remote multicast routers, to direct multicast traffic from the multicast server to many multicast clients.</td>
         </tr>   
+        <tr>
+            <td>L2TP</td>
+            <td>Layer 2 Tunneling Protocol </td>
+            <td>A tunneling protocol used to support virtual private networks (VPNs) or as part of the delivery of services by ISPs. It  encrypts  its own control messages (using an optional pre-shared secret), and does not provide any encryption or confidentiality of content by itself. Rather, it provides a tunnel for Layer 2 (which may be encrypted), and the tunnel itself may be passed over a Layer 3 encryption protocol such as IPsec [1]</td>
+        </tr>
     </tbody>
 </table>
-
-
-
 
 
 ---

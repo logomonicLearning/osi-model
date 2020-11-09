@@ -8,8 +8,8 @@ TABLE OF CONTENT:
 </div>
 
 ## KEY TERMS
-- <em>Network Interface Card (NIC)</em>: network interface card is hardware that enables devices to communicate on a network. it has a MAC address which is burned into the device. 
-- <em>Mac Address</em>: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is usually separated by any of the following: hyphen (-); colon (:);  dot (.); The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
+- <b>Network Interface Card (NIC)</b>: network interface card is hardware that enables devices to communicate on a network. it has a MAC address which is burned into the device. 
+- <b>Mac Address</b>: The MAC address is a unique 6 Bytes (48-bit) binary address written in hexadecimal for easier conversion. Each byte is usually separated by any of the following: hyphen (-); colon (:);  dot (.); The first 3bytes identify the manufacturer of the device while the last 3 bytes are unique to every device. a computer will attempt to accept a packet if the MAC address in it's header matches it's own MAC address.
 
 <table style="text-align:center">
 <thead>
@@ -29,9 +29,9 @@ TABLE OF CONTENT:
 </table>
 
 
-- Frame: A frame is a DPU created on the Data Link layer and has source and destination MAC addresses, and the FCS (Frame Check Sequence)<span style="display:none">(Optional) when field length is not used </span> used for error detection
-- Logic Link Controller(LLC): Upper sublayer of the DLL which is the mediator between the network layer above and the MAC sublayer below. 
-- Media Access Controller(MAC): The Lower sub-layer of the DLL which  communicates with the physical layer below and the LLC (upper-sublayer)
+- <b>Frame</b>: A frame is a PDU created on the Data Link layer and has source and destination MAC addresses, and the FCS (Frame Check Sequence)<span style="display:none">(Optional) when field length is not used </span> used for error detection
+- <b>Logic Link Controller(LLC)</b>: Upper sublayer of the DLL which is the mediator between the network layer above and the MAC sublayer below. 
+- <b>Media Access Controller(MAC)</b>: The Lower sub-layer of the DLL which  communicates with the physical layer below and the LLC (upper-sublayer)
 
 ---
 
@@ -39,6 +39,7 @@ TABLE OF CONTENT:
 
 The DLL encapsulates packets from L4 Network layer into frames which has the source and destination MAC address' of the sender and receiver. It also converts electrical impulses received from the physical layer into bits, and decasulates frames to be passed on to the upper layers. The DLL also performs a similar roles to the Network layer, including addressing of data between devices, error detection and flow control. However there are a few differences that must be brought to light. The main difference is that the DLL encapsulates data with the sender and receiver's MAC address in a frame, which is used by a switches for physical addressing to devices on the same network. Whereas  the Network layer encapsulates segments from the Transport layer which has the sender and reciever's IP address which is used by the router for logical addressing to devices on a different network. In simple terms, the network layer is not used unless data needs to be sent to a device on a different network. The DLL is considered to be the most complex layer in the OSI model and consists of 2 sublayers which will be discussed separately in this article:
 
+<embed src="https://www.youtube.com/embed/0b3h7CdJRpQ">
 
 <table class="ui table">
   <caption>DIFFERENCE BETWEEN DLL &amp NETWORK LAYERS</caption>
@@ -83,41 +84,9 @@ The DLL encapsulates packets from L4 Network layer into frames which has the sou
   </tbody>
 </table>
 
-
+---
 <!-- no need for this table as each sublayer will be addressed accordingly.!!! -->
 
-<table style="display:none">
-
-<thead>
-    <tr>
-        <th>Function</th>
-        <th>Description</th>
-    </tr>
-</thead>
-<tbody>
-<tr>
-    <td>logical addressing (network layer)</td>
-    <td></td>
-</tr>
-<tr>
-    <td>physical addressing (data link layer via MAC addresses of Network Interface Card, Switches)</td>
-    <td></td>
-</tr>
-<tr>
-    <td> access media</td><td></td>
-</tr>
-<tr>
-    <td>media access control (MAC) </td>
-    <td> controls how data is placed and received from the media  e.g. 802.11 wireless, and ethernet. </td>
-</tr>
-<tr>
-    <td> error detection). </td>
-    <td>Like the network layer, the data link layer is also responsible for flow control and error control in intra-network communication </td>
-</tr>
-</tbody>
-</table>
-
-<embed src="https://www.youtube.com/embed/0b3h7CdJRpQ">
 
 <span style="display:none">it sets up links accross the physical  network ti encapsulates bits into data frames to be sent over a network and decapsulates incoming data. switches are the most common network devices that exist at the data link layer. it is also involved in error detection</span>
 
@@ -125,7 +94,7 @@ The DLL encapsulates packets from L4 Network layer into frames which has the sou
 ---
 
 ## Logic Link Control (LLC) 802.2 (implemented in software)
-The LLC is the upper sublayer of the LLC which acts as an interface between the MAC sublayer and the network layer. <span style="display:none">LLC is very similar to several famous data link protocols, like Synchronous Data Link Control (SDLC) or High Level Data Link Control (HDLC) protocols. </span> The LLC includes the <span style="color:blue">service access points (SAP)</span> information in the frame to allow multiple applications to communicate simultaneously with other applications on the local machine or other stations on the network. 
+The LLC is the upper sublayer of the LLC which acts as an interface between the MAC sublayer and the network layer. LLC is very similar to several famous data link protocols, like Synchronous Data Link Control (SDLC) or High Level Data Link Control (HDLC) protocols. The LLC includes the <span style="color:blue">service access points (SAP)</span> information in the frame to allow multiple applications to communicate simultaneously with other applications on the local machine or other stations on the network. 
 
 
 It provides the following services:
@@ -182,15 +151,15 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
     </thead>
     <tbody>
         <tr>
-            <td> flow control media access?? </td>
-            <td></td>
+            <td> flow control</td>
+            <td>it determines the speed at which data can be transfered between two devices on the local network measured in bits/second</td>
         </tr>
         <tr>
             <td>
                 multiplexing
             </td>
             <td>
-                for the transmission medium.
+                Allowing multiple protocols to run on the same medium
             </td>
         </tr>
         <tr>
@@ -200,19 +169,19 @@ MAC sublayer provides a control abstraction of the physical layer such that the 
         <tr>
             <td>Error Detection</td>
             <td>
-                 append/check FCS, discard malformed frames <a href="">check header parts for more information</a>. collision recovery :csma/cd, csma/ca,Token Ring
+                Append/check Frame Check Sequence (FCS) in the header for errors and  discard malformed frames <a href="">check header parts for more information</a>. 
             </td>
         </tr>
         <tr>
-            <td>Media Access</td>
-            <td><br> <br> For topologies with a collision domain (bus, ring, mesh, point-to-multipoint topologies), controlling when data is sent and when to wait is necessary to avoid collisions. Additionally, the MAC is also responsible for compensating for collisions by initiating retransmission if a jam signal is detected.
+            <td>Media Access &amp; </td>
+            <td><br> <br>  It controls when devices on a network can send data and when to wait with mechanisms such as  csma/cd, csma/ca and Token Ring For topologies with a collision domain (bus, ring, mesh, point-to-multipoint topologies). This necessary to avoid collisions of data which corrupts its integrity.  Additionally, the MAC is also responsible for compensating for collisions by initiating retransmission if a jam signal is detected.
             </td>
         </tr>
         <tr>
             <td>
                 Mac Addressiing for Ethernet 802.3
             </td>       
-            <td></td>
+            <td>Uses the device's MAC address to identify devices on a network</td>
         </tr>
         <tr>
             <td>
@@ -452,6 +421,7 @@ parts:
 
 </table>
 
+![Ethernet Field Protocols](..\images\EthernetFieldProtocolNumbers.png)
 
 ---
 
@@ -460,12 +430,34 @@ parts:
 there are 2 types of protocols. Noiseless channels and noisy channel which is what stop and wait ARC and go-back-n ARQ.
 
 ![Ethernet Field Protocols](..\images\EthernetFieldProtocolNumbers.png)
-- ARP
-- HDLC
-- PPP
-- frame relay
-- 802.3
-- 802.11
+
+<tr>
+  <td>ARP</td>
+  <td>Address Resolution Protocol</td>
+  <td>a procedure for mapping a dynamic Internet Protocol address (IP address) to a permanent physical machine address in a local area network (LAN).</td>
+</tr>
+<tr>
+  <td>HDLC</td>
+  <td>High-Level Data Link Control</td>
+  <td>is a bit-oriented code-transparent synchronous data link layer protocol used to deliver error-free data to the intended destionation device. it doesnt have a type field, and is router specific, so two different  a cisco router.
+
+  </td>
+</tr>
+<tr>
+  <td>PPP</td>
+  <td>Point to point Protocol</td>
+  <td>protocol between two routers directly without any host or any other networking in between. It can provide connection authentication, transmission encryption,[1] and compression. <br><br>
+PPP is used over many types of physical networks, including serial cable, phone line, trunk line, cellular telephone, specialized radio links, and fiber optic links</td>
+</tr>
+<tr>
+  <td>frame relay</td>
+</tr>
+<tr>
+  <td>Ethernet 802.3</td>
+</tr>
+<tr>
+  <td>Wireless 802.11</td>
+</tr>
 
 
 ---

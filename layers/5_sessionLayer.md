@@ -9,9 +9,9 @@ TABLE OF CONTENT:
 
 ## KEY TERMS
 
-- Session : The time between when the communication is opened and closed 
-- Authentication:
-- Authorisation:
+- <b>Session</b> : The time between when the communication is opened and closed 
+- <b>Authentication</b>: Authentication refers to unique identifying information from each system user, generally in the form of a username and password. 
+- <b>Authorisation</b>: refers to the process of adding or denying individual user access to a computer network and its resources. Users may be given different authorization levels that limit their access to the network and associated resources. 
 - Remote Procedure Call (RPC):
 
 ---
@@ -24,11 +24,7 @@ Usually, the main tasks of L5 is authentication and authorisation, downloads fil
 
 ## introduction to session layer
 
-Session layer is important for connecting processeses running on diffrent stations over a network. It supports multiple types of connections and authentication. and reconnection if an error should occure.
-See the table below for a list of its main functions:
-
-It provides for full-duplex, half-duplex, or simplex operation, and establishes procedures for checkpointing, suspending, restarting, and terminating a session. In the OSI model, this layer is responsible for gracefully closing a session, which is handled in the Transmission Control Protocol at the transport layer in the Internet Protocol Suite.
-
+Session layer is important for host-to-host communication between processes running on different stations over a network. The session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources. It supports multiple types of connections and authentication. It provides for full-duplex, half-duplex, or simplex operation. It establishes procedures for check pointing, suspending, restarting, and terminating a session, and reconnection if an error should occur. <span style="display:none">gracefully closing a session.</span>
 
 
 <!-- <embed src="https://www.youtube.com/embed/fWM-a3onIOk"> -->
@@ -36,6 +32,7 @@ It provides for full-duplex, half-duplex, or simplex operation, and establishes 
 <!-- https://www.youtube.com/watch?v=aPcku3orRmI -->
 ---
 
+See the table below for a list of its main functions:
 <table>
 <thead>
     <tr>
@@ -51,7 +48,8 @@ It provides for full-duplex, half-duplex, or simplex operation, and establishes 
     <td>Data transfer synchronisation </td>
     <td>it does this by creating checkpoints so that data transfer can resume in case the connection is terminated unexpectedly. without the checkpoints the whole process must start again.</td>
 </tr>
-<tr><td>Authenticaction and authorisation</td><td>it checks user credentials such as username and password</td></tr></tbody>
+<tr>
+    <td>Authentication and Authorisation</td><td>it checks user credentials such as username and password</td></tr></tbody>
 </table>
 
 
@@ -77,19 +75,20 @@ It provides for full-duplex, half-duplex, or simplex operation, and establishes 
     <tbody>
         <tr>
             <td> H.323 for VOIP </td>
-            <td>?</td>
+            <td>Voice Over Internet Protocol</td>
             <td>
-                H.323 is an ITU Telecommunication Standardization Sector (ITU-T) recommendation that describes protocols for the provision of audio-visual (A/V) communication sessions on all packet networks. H.323 provides standards for equipment, computers and services for multimedia communication across packet based networks and specifies transmission protocols for real-time video, audio and data details. used by applications such as skype.
+                H.323 is an ITU Telecommunication Standardization Sector (ITU-T) recommendation that describes protocols for the provision of audio-visual (A/V) communication sessions on all packet networks. H.323 provides standards for equipment, computers and services for multimedia communication across packet based networks and specifies transmission protocols for real-time video, audio and data details. used by applications such as Skype.
             </td>
         </tr>
         <tr>
             <td> NetBIOS </td>
             <td> Network Basic Input Output System</td>
-            <td>to share files and printers over a network.</td>
+            <td>It allows applications on separate computers to communicate over a local area network for sharing resources such as files and printers.</td>
         </tr>
         <tr>
             <td> NFS </td>
-            <td></td>
+            <td>Network File System</td>
+            <td>It is a distributed file system protocol allowing a user on a client computer to access files over a computer network much like local storage is accessed.</td>
         </tr>
         <tr>
             <td> RPC </td>
@@ -104,19 +103,9 @@ It provides for full-duplex, half-duplex, or simplex operation, and establishes 
             </td>
         </tr>
         <tr>
-            <td>PAP</td>
-            <td>Password Authentication Protocol</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>L2TP</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <td>APIs</td>
-            <td></td>
-            <td></td>
+            <td>Application Programming Interface </td>
+            <td>An API is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, the conventions to follow, etc. </td>
         </tr>
         
     </tbody>
@@ -125,5 +114,5 @@ It provides for full-duplex, half-duplex, or simplex operation, and establishes 
 <a href="">Prev</a>
 <a href="">Next</a>
 
-it is very similar to IPC, however it is more well structured, and doesnt just send packets. 
+<span style="display:none">it is very similar to IPC, however it is more well structured, and doesnt just send packets. </span>
 
