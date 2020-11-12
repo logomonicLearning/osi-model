@@ -12,7 +12,7 @@ TABLE OF CONTENT:
 - <b>Encryption</b>: the process of converting information or data into a code, especially to prevent unauthorized access.
 - <b>Compression</b>:  the process of modifying, encoding or converting the bits structure of data in such a way that it consumes less space on disk.
 - <b>Character Encoding</b>: character encoding is used to represent a repertoire of characters by some kind of encoding system, the most common being ASCII
-- <b>Data Type</b>: data type or simply type is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data. e.g. MP3 for audio, html for webpages etc.
+- <b>Data/Mime Type</b>: data type or simply type is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data. e.g. MP3 for audio, html for webpages etc.
 
 ---
 
