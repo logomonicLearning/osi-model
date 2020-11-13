@@ -3,9 +3,9 @@
 
 # Application Layer (Layer 7)
 
-<div id="TOC">
-TABLE OF CONTENT:
-</div>
+<!-- <div id="TOC">
+<h3 style="font-weight:bold;">TABLE OF CONTENT :</h3>
+</div> -->
 
 ---
 
