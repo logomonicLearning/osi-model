@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style>
+
+body{
+	width:100vw;
+	height:100vh;
+}
+
+.container{
+  width:90vw;
+  height:auto;
+  position:relative;
+  top:50px;
+  margin:auto;
+  /* background:blue; */
+  border:1px dashed green;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper__numbers{
+  width: 600px;
+  height:600px;
+  display:grid;
+  grid-template-rows:repeat(3, 1fr);
+  grid-template-columns:repeat(3, 1fr);
+}
+
+.item{
+  width:auto;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:1px dashed grey;
+}
+
+.item--concept{
+  border:1px solid red;
+  display:flex;
+  flex-direction:column;
+}
+
+.item--blank{}
+.item--arr img{
+  /* background:url("https://image.flaticon.com/icons/png/512/54/54668.png") no-repeat center; */
+  width:100%;
+  height:100%;
+}
+
+.item img:first-child{
+  /* transform:rotate(45deg); */
+}
+
+
+.wrapper__application{
+	width:151px;
+	height:inherit;
+	display:flex;
+	flex-direction:column;
+	margin-left:50px;
+}
+
+.application__item{
+	width:100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	border:1px solid green;
+
+}
+
+.bracket{
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	width:20px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+</style>
+</head>
+<body>
+  
+  <span style="display:none;">
+    .container>wrapper--grid>.item--blank*3+.item--arr*3+.item--concept*3
+  </span>
+  <div class="container">
+    <div class="wrapper__numbers wrapper--grid">
+      
+      <div class="item item--blank"></div>
+      <div class="item item--arr"><img src="https://image.flaticon.com/icons/png/512/54/54668.png" alt=""></div>
+      <div  class="item item--concept">
+      	<div>Hexadecimal </div>
+      	<div><input id="hex" placeholder="0xFF" type="text"></div>
+      </div>
+      
+      <div  class="item item--concept">
+      	<div>Decimal</div>
+		<div><input id="dec" placeholder="255" type="number">		</div>
+      </div>
+      <div class="item item--blank"></div>
+      <div class="item item--arr"><img src="https://image.flaticon.com/icons/png/512/54/54668.png" alt=""></div>
+      
+      <div class="item item--blank"></div>
+      <div class="item item--arr"><img src="https://image.flaticon.com/icons/png/512/54/54668.png" alt=""></div>
+      <div  class="item item--concept">
+      	<div>binary</div>
+		<div><input id="bin" placeholder="0b11111111" type="text"></div>
+      </div>
+      
+    </div>
+	<div class="bracket">
+		an image of a bracket goes here
+	</div>
+    <div class="wrapper__application">
+    	<div class="application__item">Truth Tables</div>
+    	<div class="application__item">Color RGB</div>
+    	<div class="application__item">Color #hex</div>
+    	<div class="application__item">IPv4</div>
+    	<div class="application__item">IPv6</div>
+    	<div class="application__item">ASCII</div>
+    	<div class="application__item">UTF-8</div>
+    	<!-- <div class="item"></div> -->
+    </div>
+  </div>
+</body>
+<script>
+  let arr=document.querySelectorAll('img')
+undefined
+arr[0].style="transform:translateY(20px) rotate(45deg)"
+"transform:translateY(20px) rotate(45deg)"
+arr[2].style="transform:translateY(-20px) rotate(-45deg)"
+"transform:translateY(-20px) rotate(-45deg)"
+
+let concepts=[...document.querySelectorAll('.item--concept')]
+concepts[0].style.background="purple"
+concepts[1].style.background="green"
+concepts[2].style.background="red"
+
+const dec=document.getElementById('dec'),
+		bin=document.getElementById('bin'),
+		hex=document.getElementById('hex')
+
+
+dec.addEventListener('keypress',(e)=>{
+	if (e.which==13){
+		num=Number(dec.value);
+		bin.value=num.toString(2);
+		hex.value=num.toString(16).toUpperCase();
+	}
+})		
+
+</script>
+<style>
+let images=document.querySelectorAll("img");
+images[0].style.transform="rotate(45deg)";
+// images[1].style.transform="";
+images[2].style.transform="rotate(-45deg)";
+</style>
+</html>

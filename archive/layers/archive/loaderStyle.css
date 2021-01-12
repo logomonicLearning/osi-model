@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'boxboy';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/394353/boxboy.ttf');
+}
+
+$boxboySize: 2.6em;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'boxboy', sans-serif;
+}
+
+#app {
+  width: 420px;
+  transform: translateX(-210px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: $boxboySize;
+  width: $boxboySize;
+  border: 2px solid black;
+  text-align: center;
+  line-height: $boxboySize;
+  font-size: 1.4em;
+  border-radius: 5%;
+  display: none;
+  background: white;
+  position: absolute;
+  z-index: -1;
+}
+
+#boy {
+  border: 3px solid black;
+  display: block;
+  z-index: 2;
+
+  .eye {
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    background: black;
+    top: 33%;
+  }
+
+  .eye:first-of-type {
+    left: 40%;
+  }
+
+  .eye:nth-of-type(2) {
+    right: 20%;
+  }
+}

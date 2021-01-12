@@ -1,0 +1,58 @@
+.grid{
+  display:grid;
+}
+#cipher-suite__body{
+  grid-template-rows:100px 210px 195px;
+  /* height: 20px; */
+  width: 90%;
+  height: 80;
+}
+.cipher-suite__types{
+  grid-template-columns:repeat(4,1fr);
+  height: 100px;
+}
+.cipher-suite__type{
+  border:1px dashed green;
+}
+.cipher-suite__descriptions{
+  border:1px dashed red;
+  padding-left:20px;
+  padding-right:20px;
+}
+.cipher-suite__description{
+  /* padding-left:20px;
+  padding-right:20px */;
+}
+.hidden{
+  display:none;
+}
+.cipher-suite__suites{
+  border:1px dashed red;
+}
+.cipher-suite__algorithms{
+  width:100%;
+}
+.cipher-suite__algorithm{
+  border:1px dashed blue;
+  /* width:100%; */
+}
+/*  */
+.flex{
+  display:flex;
+}
+.flex--center{
+  align-items:center;
+  justify-content:center;
+}
+.center{
+  text-align:center;
+}
+.flex--column{
+  flex-direction:column;
+}
+
+/* */
+
+.hidden{
+  display:none;
+}

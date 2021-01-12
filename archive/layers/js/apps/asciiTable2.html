@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style >
+		.container{
+			width:90vw;
+			height:auto;
+			margin:auto;
+			top:50px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="container">
+				<section> 
+			<xmp>
+				//-----ASCII--------\\
+[ascii](https://en.wikipedia.org/wiki/ASCII)
+
+ASCII uses 7 bits to represent a character incluing numbers, letters and symbols such as &?; an control characters such as return, tab, etc. By using 7 bits, we can have a total of 2^7=128 distinct combinations*  so there is a maximum of 128 possible characters.
+
+It uses 7 bits rather than 8 as the last bit is used for avoiding errors as parity bit. This was relevant years ago.
+
+ASCII extended is the adition of an 8th bit which double the amount of possible combinations, that is Math.pow(2,8)== 256. This allowe the addition of extra characters such as "é". it is still limited, hence the introduction of UTF-8 
+
+A=65
+a=97
+
+
+
+
+//---UTF-8---\\
+
+Unicode allowed non latin characters such as Chinese to be used.
+utf-8 extends ascii 
+
+[128 64 32 16 8 4 2 1]
+
+A=65=1000001
+
+//--2 Byte encoding--\\
+[110xxxxxx][10xxxxxx]
+
+x=5+6=11
+that is Math.pow(2,11)=2048 possible combinations
+
+//-3 Byte encoding-\\
+[1110xxxx][10xxxxxx][10xxxxxx]
+x=16
+=Math.pow(2,16)
+
+subaka
+wabaki
+
+
+0000|0000 0001|1111 1010|1100 1011|1101
+	00		  1F 	    AC 		  BD
+
+//-four Byte encoding UTF-\\
+1111|0111 1011|1010 1011|0010 1011|1101
+	F7		  BA 		B2		  BD
+......	  ..   		..		  ..
+
+
+the first four nums in the first one indicate how many bytes are to follow
+the first nums of each subsequent octet begins with 10=continuation byte
+chinese uses 3Bytes utf-8 encoding 2Bytes in utf-16
+	
+//------HEXADECIMAL-------\\
+</xmp>
+
+			</section>
+
+	<table class="ui celled unstackable table">
+		<thead>
+			<th>ASCII</th>
+			<th>Hex</th>
+			<th>Symbol</th>
+			<th>Type</th>
+			<th>Description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>	
+				<td>1</td>	
+				<td>SOH</td>	
+				<td>CC</td>	
+				<td>Start of Heading</td>
+			</tr>
+			<tr>
+				<td>2</td>	
+				<td>2</td>	
+				<td>STX</td>	
+				<td>CC</td>	
+				<td>Start of Text</td>
+			</tr>
+			<tr>
+				<td>3</td>	
+				<td>3</td>	
+				<td>ETX</td>	
+				<td>CC</td>	
+				<td>End of Text</td>
+			</tr>
+			<tr>
+				<td>4</td>	
+				<td>4</td>	
+				<td>EOT</td>	
+				<td>CC</td>	
+				<td>End of Transmission</td>
+			</tr>
+			<tr>
+				<td>5</td>	
+				<td>5</td>	
+				<td>ENQ</td>	
+				<td>CC</td>	
+				<td>Enquiry</td>
+			</tr>
+			<tr>
+				<td>6</td>	
+				<td>6</td>	
+				<td>ACK</td>	
+				<td>CC</td>	
+				<td>Acknowledge</td>
+			</tr>
+			<tr>
+				<td>16</td>	
+				<td>10</td>	
+				<td>DLE</td>	
+				<td>CC</td>	
+				<td>Data Link Escape</td>
+			</tr>
+			<tr>
+				<td>21</td>	
+				<td>15</td>	
+				<td>NAK</td>	
+				<td>CC</td>	
+				<td>Negative Acknowledge</td>
+			</tr>
+			<tr>
+				<td>22</td>	
+				<td>16</td>	
+				<td>SYN</td>	
+				<td>CC</td>	
+				<td>Synchronous Idle</td>
+			</tr>
+			<tr>
+				<td>23</td>	
+				<td>17</td>	
+				<td>ETB</td>	
+				<td>CC</td>	
+				<td>End of Transmission Block</td>
+			</tr>
+		</tbody></table>
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width">
+		  <title>JS Bin</title>
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+		  
+		  
+		  
+		</head>
+		<body>
+
+			
+		  <table class="ui unstackable table celled" cellspacing="0" cellpadding="0" align="center">
+		    <tbody>
+		        <tr>
+		            <td class="cell">
+
+		                <table class="e1" cellspacing="0" cellpadding="0" align="CENTER">
+		                <thead>
+		                    <tr>
+		                        <th>ASCII</th>
+		                        <th>Hex</th>
+		                        <th>Symbol</th>
+		                        <th>Type</th>
+		                        <th><b>Description</b></th>
+		                    </tr>
+		                </thead>
+		                    <tbody>
+		                        
+		                        <tr class="z1">
+		                            <td colspan="5">
+		                                <hr>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td align="center">
+		                                0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br> 8
+		                                <br>9<br>10<br>11<br>12<br>13<br>14<br>15<br><br>
+		                            </td>
+		                            <td align="center">
+		                                0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br> 8
+		                                <br>9<br>A<br>B<br>C<br>D<br>E<br>F<br><br>
+		                            </td>
+		                            <td align="center">
+		                                NUL<br>SOH<br>STX<br>ETX<br>EOT<br>ENQ<br>ACK<br>BEL<br> BS
+		                                <br>TAB<br>LF<br>VT<br>FF<br>CR<br>SO<br>SI<br><br>
+		                            </td>
+		                            <td align="center">
+		                                <br>CC<br>CC<br>CC<br>CC<br>CC<br>CC<br><br> FE
+		                                <br>FE<br>FE<br>FE<br>FE<br>FE<br><br><br><br>
+		                            </td>
+		                            <td>Null<br>Start of Heading<br>Start of Text<br>End of Text <br>End of Transmission<br>Enquiry<br>Acknowledge<br>Bell (audible or attention signal)<br> Backspace<br>Horizontal Tabulation<br>Line Feed<br>Vertical Tabulation<br>Form
+		                                Feed<br>Carriage Return<br>Shift Out<br>Shift In<br><br></td>
+		                        </tr>
+		                    
+		                                                
+		                        <tr>
+		                            <td align="center">
+		                                16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br> 24
+		                                <br>25<br>26<br>27<br>28<br>29<br>30<br>31<br><br>
+		                            </td>
+		                            <td align="center">
+		                                10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br> 18
+		                                <br>19<br>1A<br>1B<br>1C<br>1D<br>1E<br>1F<br><br>
+		                            </td>
+		                            <td align="center">
+		                                DLE<br>DC1<br>DC2<br>DC3<br>DC4<br>NAK<br>SYN<br>ETB<br> CAN
+		                                <br>EM<br>SUB<br>ESC<br>FS<br>GS<br>RS<br>US<br><br>
+		                            </td>
+		                            <td align="center">
+		                                CC<br><br><br><br><br>CC<br>CC<br>CC<br>
+		                                <br><br><br><br>IS<br>IS<br>IS<br>IS<br><br>
+		                            </td>
+		                            <td>Data Link Escape<br>Device Control 1<br>Device Control 2<br>Device Control 3 <br>Device Control 4<br>Negative Acknowledge<br>Synchronous Idle<br>End of Transmission Block<br> Cancel<br>End of Medium<br>Substitute<br>Escape<br>File
+		                                Separator<br>Group Separator<br>Record Separator<br>Unit Separator<br><br></td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </td>
+		        </tr>
+
+		        <tr>
+		            <td class="cell">
+		                <table class="e1" cellspacing="0" cellpadding="0" align="CENTER">
+		                    <tbody>
+		                        <tr>
+		                            <td class="b2" align="center"><br><b>&nbsp;</b></td>
+		                            <td class="b2" align="center"><br><b>&nbsp;</b></td>
+		                            <td class="b4" align="center"><br><b>&nbsp;</b></td>
+		                            <td class="b4" align="center"><br><b>Type</b></td>
+		                            <td><br><b>Description</b></td>
+		                        </tr>
+		                        <tr class="z1">
+		                            <td colspan="5">
+		                                <hr>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td align="center">
+		                                <br><br><br><br>
+		                            </td>
+		                            <td align="center">
+		                                <br><br><br><br>
+		                            </td>
+		                            <td align="center">
+		                                <br><br><br><br>
+		                            </td>
+		                            <td align="center">
+		                                CC<br>FE<br>IS<br><br>
+		                            </td>
+		                            <td>
+		                                Communication Control<br>Format Effector<br>Information Separator<br><br>
+		                            </td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+
+		            </td>
+		        </tr>
+		    </tbody>
+		</table>
+		</div>
+		
+		</body>
+				<script>
+// 		window.onload=function(){
+// 			for(i=33;i<2**7;i++)console.log(asc=String.fromCharCode(i));  	
+// 		}
+		
+		
+		for(let i=33;i<2**7;i++){ 
+		    console.table([i,as=String.fromCharCode(i)])
+		    
+		  }
+
+	</script>
+
+
+
+
+		</html>

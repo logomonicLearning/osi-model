@@ -1,0 +1,93 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link id=Main-File rel=Main-File href="../Tables.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(12);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../Tables.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=452 style='border-collapse:
+ collapse;table-layout:fixed;width:339pt'>
+ <col width=64 span=2 style='width:48pt'>
+ <col width=324 style='mso-width-source:userset;mso-width-alt:11849;width:243pt'>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 width=64 style='height:15.75pt;width:48pt'></td>
+  <td width=64 style='width:48pt'>Bytes</td>
+  <td width=324 style='width:243pt'></td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'>Index</td>
+  <td class=xl211>half</td>
+  <td>0x3</td>
+ </tr>
+ <tr class=xl110 height=81 style='height:60.75pt'>
+  <td height=81 style='height:60.75pt'>Flow stat<span style='display:none'>us</span></td>
+  <td>half</td>
+  <td class=xl109 width=324 style='width:243pt'>0: clear to send consecutive
+  Frame<br>
+    1: Wait for Next flow-control frame<br>
+    2: abort the multiframe communication(Buffer overflow)</td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 style='height:15.75pt'>Block Size</td>
+  <td align=right>2</td>
+  <td>how many consecutive frames can be sent at once</td>
+ </tr>
+ <tr class=xl110 height=81 style='height:60.75pt'>
+  <td height=81 style='height:60.75pt'><span
+  style='mso-spacerun:yes'> </span>ST min</td>
+  <td align=right>3</td>
+  <td class=xl109 width=324 style='width:243pt'>Minimum time gaps between time
+  frames<br>
+    0x00-0x7F: number of milisec between consecutive frames<br>
+    0xF1--0xf9: gap in 100microsec (</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=324 style='width:243pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link id=Main-File rel=Main-File href="../Tables.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(2);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../Tables.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=868 style='border-collapse:
+ collapse;table-layout:fixed;width:652pt'>
+ <col width=133 style='mso-width-source:userset;mso-width-alt:4864;width:100pt'>
+ <col width=106 style='mso-width-source:userset;mso-width-alt:3876;width:80pt'>
+ <col class=xl109 width=139 style='mso-width-source:userset;mso-width-alt:5083;
+ width:104pt'>
+ <col width=98 style='mso-width-source:userset;mso-width-alt:3584;width:74pt'>
+ <col class=xl109 width=392 style='mso-width-source:userset;mso-width-alt:14336;
+ width:294pt'>
+ <tr class=xl110 height=41 style='height:30.75pt'>
+  <td height=41 width=133 style='height:30.75pt;width:100pt'></td>
+  <td class=xl111 width=106 style='width:80pt'></td>
+  <td class=xl65 width=139 style='width:104pt'>Protocol ID</td>
+  <td class=xl69 width=98 style='width:74pt'>Size <br>
+    (Bytes/Octets)</td>
+  <td class=xl109 width=392 style='width:294pt'></td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 class=xl112 style='height:15.75pt'>header</td>
+  <td class=xl113>addresses</td>
+  <td class=xl65 width=139 style='width:104pt'>DST MAC</td>
+  <td class=xl69></td>
+  <td class=xl109></td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 class=xl110 style='height:15.75pt'>&nbsp;</td>
+  <td class=xl114>&nbsp;</td>
+  <td class=xl65 width=139 style='width:104pt'>SRC MAC</td>
+  <td class=xl69></td>
+  <td class=xl109></td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 class=xl115 style='height:15.75pt'>&nbsp;</td>
+  <td></td>
+  <td class=xl65 width=139 style='width:104pt'>Type/Length</td>
+  <td class=xl69></td>
+  <td class=xl109></td>
+ </tr>
+ <tr class=xl110 height=341 style='height:255.75pt'>
+  <td height=341 class=xl115 style='height:255.75pt'>&nbsp;</td>
+  <td class=xl116>LLC</td>
+  <td class=xl117 width=139 style='width:104pt'>DSAP (Destination Service
+  Access Point)</td>
+  <td class=xl118 align=right>1</td>
+  <td class=xl119 width=392 style='width:294pt'>an 8-bit long field. This field
+  functions as SSAP, but it contains the the value of the protocol to which
+  data is addressed. SSAP and DSAP values must be the same because the protocol
+  through which a message is generated in the source machine should be the same
+  one the is going to receive the message in the destination machine. For
+  example, a message sent by IPv6 network layer protocol must be received by
+  IPv6 network layer protocol of the destination machine ; so both SSAP and
+  DSAP fields must comprise IPv6 value which is 0x86DD. By and large, DSAP
+  represents the logical addresses of the network layer entity intended to
+  receive the message, or rather the network layer protocol that is
+  receiving.<br>
+    Control :<span style='mso-spacerun:yes'>  </span>is an 8-bit long field.
+  This field indicates whether the communication is connection-less or
+  connection-oriented (TCP or UDP protocols), which is usually performed by the
+  upper layers (transport layer).</td>
+ </tr>
+ <tr class=xl110 height=201 style='height:150.75pt'>
+  <td height=201 class=xl115 style='height:150.75pt'>&nbsp;</td>
+  <td class=xl114>&nbsp;</td>
+  <td class=xl120 width=139 style='width:104pt'>SSAP (Source Service Access
+  Point)</td>
+  <td class=xl118 align=right>1</td>
+  <td class=xl109 width=392 style='width:294pt'>0x0800 means IPv4,<span
+  style='mso-spacerun:yes'>  </span>0x8100 means 802.1Q tagged frame, 0x0806
+  means ARP, and 0x86DD means IPv6. Thus, The SSAP indicates from which service
+  the LLC data unit was sent. To put it another way, SSAP represents the logical
+  address of the network layer entity through which the message is carried, and
+  which created the message, or rather the<span style='mso-spacerun:yes'> 
+  </span>network layer protocol that is sending. For example, a message might
+  be carried by ipv4 ; so it can be said that IPv4 protocol type is the SSAP,
+  which, for easy identification, puts its value 0x0800 in SSAP field.</td>
+ </tr>
+ <tr class=xl110 height=105 style='mso-height-source:userset;height:78.75pt'>
+  <td height=105 class=xl115 style='height:78.75pt'>&nbsp;</td>
+  <td class=xl121>&nbsp;</td>
+  <td class=xl120 width=139 style='width:104pt'>Control</td>
+  <td class=xl118>1 or 2</td>
+  <td class=xl109></td>
+ </tr>
+ <tr class=xl110 height=201 style='height:150.75pt'>
+  <td height=201 class=xl80 width=133 style='height:150.75pt;width:100pt'>SNAP
+  Extension<br>
+    (Subnetwork Access Protocol) frame:</td>
+  <td></td>
+  <td class=xl122 width=139 style='width:104pt'>OUI</td>
+  <td class=xl118 align=right>3</td>
+  <td class=xl119 width=392 style='width:294pt'>3-byte field that SNAP frame
+  encompasses. If this field is assigned 000000 (hexadecimal), the ID is the
+  Ethernet type (EtherType)<span style='mso-spacerun:yes'>  </span>field value
+  for the protocol running on top of SNAP. But if the OUI field is an identifier
+  of a specific organization, the ID field is a value allocated to a protocol
+  assigned by that organization. For example, OUI is an advantage to vendors
+  because they can create their own types to use, such as Cisco company, which
+  has protocols that are peculiar to it and thus encapsulated with an ID value
+  specific to the organization.</td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 class=xl110 style='height:15.75pt'>&nbsp;</td>
+  <td></td>
+  <td class=xl123 width=139 style='width:104pt'>Protocol ID</td>
+  <td class=xl124 align=right>2</td>
+  <td class=xl109></td>
+ </tr>
+ <tr class=xl110 height=21 style='height:15.75pt'>
+  <td height=21 class=xl125 style='height:15.75pt'>Trailer</td>
+  <td>FCS</td>
+  <td class=xl109></td>
+  <td></td>
+  <td class=xl109></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=133 style='width:100pt'></td>
+  <td width=106 style='width:80pt'></td>
+  <td width=139 style='width:104pt'></td>
+  <td width=98 style='width:74pt'></td>
+  <td width=392 style='width:294pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

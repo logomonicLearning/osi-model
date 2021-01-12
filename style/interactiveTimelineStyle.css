@@ -1,0 +1,34 @@
+#interactive-timeline{
+	width: 100%;
+	height:500px;
+}
+.interactive-timeline{
+	width:inherit;
+	height:inherit;
+	grid-template-columns: 300px auto;
+}
+.interactive-timeline__years{
+	grid-template-rows: 50px auto;
+	height:inherit;
+}
+.interactive-timeline__descriptions{
+	grid-template-rows: 50px auto;
+	height:inherit;
+}
+.interactive-timeline__year__row{
+	grid-template-columns: 1fr 2fr;
+}
+.interactive-timeline__year{
+	cursor:pointer;
+}
+.interactive-timeline__event{
+
+}
+.interactive-timeline__description{
+    padding:20px;
+    overflow-y:auto;
+}
+
+.align-left{
+	text-align:left;
+}

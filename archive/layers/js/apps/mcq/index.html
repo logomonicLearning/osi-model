@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Literary Devices</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width"
+        initial-scale=1, user-scalable="yes">
+        <link rel="stylesheet" href="index.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+<script src="questions.js"></script>
+
+</head>
+
+<body>
+  <span style="display:none;">
+    .container>.wrapper.grid>
+    (.users-container.flex.flex--column)+
+    (.mcq-container.grid>
+      .question.flex.flex--center+
+      .media.flex.flex--center+
+      .answers.grid+
+      .timer.flex.flex--center)
+  </span>
+
+  <div class="container">
+    <div class="mcq-wrapper grid">
+      <div id="mcq-container" class="mcq-container grid"></div>
+      <div  class="start flex flex--center">
+        <button id="start-stop-btn">Start</button>
+      </div>
+    </div>
+    <div id="results" class="results hidden"></div>
+    <div class="nav-btns hidden flex"><button id="repeat-btn">click to repeat</button><button id="next"><a href="../../6_presentationLayer.md">Next</a></button></div>
+  </div>
+  <script src="index.js"></script>
+
+</body>
+</html>
