@@ -1,6 +1,7 @@
-<link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="stylesheet" type="text/css" href="/style/style.css">
 <!-- <link rel="stylesheet" type="text/css" href="style/interactiveFunctionsStyle.css"> -->
-<link rel="stylesheet" type="text/css" href="style/interactiveTimelineStyle.css"><link rel="stylesheet" type="text/css" href="style/osiSimpleStyle.css">
+<link rel="stylesheet" type="text/css" href="/style/interactiveTimelineStyle.css">
+<link rel="stylesheet" type="text/css" href="/style/osiSimpleStyle.css">
 <script src="js/mkeEl.js"></script>
 <script src="js/formatter/navigation.js"></script>
 <script src="js/osiSimple/data.js"></script>
